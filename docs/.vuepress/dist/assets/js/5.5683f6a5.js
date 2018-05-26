@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[5],{189:function(t,n,s){"use strict";s.r(n);var e=s(0),c=Object(e.a)({},function(){var t=this.$createElement;return(this._self._c||t)("div",{staticClass:"content"},[this._ssrNode("<p>tb</p>")])},[],!1,null,null,null);n.default=c.exports}}]);

@@ -1,0 +1,16 @@
+{
+  "name": "vuepress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "vuepress": "^0.9.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "docs:dev": "npx vuepress dev docs",
+    "docs:build": "npx vuepress build docs"
+  },
+  "author": "fangdown",
+  "license": "ISC"
+}

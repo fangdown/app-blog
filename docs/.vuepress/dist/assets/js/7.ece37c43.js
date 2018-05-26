@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[7],{192:function(t,n,s){"use strict";s.r(n);var e=s(0),c=Object(e.a)({},function(){var t=this.$createElement;return(this._self._c||t)("div",{staticClass:"content"},[this._ssrNode("<p>联系</p>")])},[],!1,null,null,null);n.default=c.exports}}]);
