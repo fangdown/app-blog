@@ -4,7 +4,7 @@ module.exports = {
   base: '/article/',
 
   // 站点标题，在默认主题中会显示在导航栏左侧
-  title: '好记性不如烂笔头，思维导图',
+  title: '思维发散',
 
   // 站点描述，将会在 HTML 中渲染为 <meta> 标签，在默认主题中会显示在首页上
   description: '努力前行,温故而知新',
@@ -53,12 +53,19 @@ module.exports = {
         children: [ /* ... */ ]
       },
       {
+        title: 'web安全',
+        children: [
+          '/safe/XSS.md'
+        ]
+      },
+      {
         title: '新特性',
         children: [ /* ... */ ]
       },
       {
         title: '干货分享',
         children: [
+          '/share/git.md',
           '/share/js.md',
           '/share/mvc.md'
         ]
