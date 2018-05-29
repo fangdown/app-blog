@@ -26,7 +26,7 @@ module.exports = {
     docsDir: 'docs',
 
     // 禁止提取 h2, h3 标签链接到侧边栏中
-    sidebarDepth: 2,
+    sidebarDepth: 0,
 
     // nav: [
     //   { text: '组件', link: '/components/agree' }
@@ -43,13 +43,14 @@ module.exports = {
       {
         title: '高级',
         children: [
-          '/high/fineCodeCheck.md',
+          '/high/fine-code-check.md',
+          '/high/fine-code-dom.md',
+          '/high/fine-code-array.md',
         ]
       },
       {
         title: '项目经验',
         children: [
-          '/high/fineCodeDom.md',          
          ]
       },
       {
