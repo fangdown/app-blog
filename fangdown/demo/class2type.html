@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>验证类型</title>
+</head>
+<body>
+  <script>
+  var class2type = {};
+  'Boolean Number String Function Array RegExp Error Date Object'.split(' ').map((item) => {
+    return class2type['[Object '+item+']'] = item.toLowerCase();
+  })
+  function type(obj){
+    if(obj == null){
+      return obj + '';
+    }
+    return typeof obj === 'object' || typeof obj === 'function' ? 
+    class2type[Object.prototype.toString.call(obj)] || 'object'
+     : typeof obj;
+  }
+  </script>
+</body>
+</html>

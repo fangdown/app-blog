@@ -26,11 +26,11 @@ module.exports = {
     docsDir: 'docs',
 
     // 禁止提取 h2, h3 标签链接到侧边栏中
-    sidebarDepth: 0,
+    sidebarDepth: 2,
 
-    nav: [
-      { text: '组件', link: '/components/agree' }
-    ],
+    // nav: [
+    //   { text: '组件', link: '/components/agree' }
+    // ],
 
     sidebar: [
       {
@@ -42,11 +42,15 @@ module.exports = {
       },
       {
         title: '高级',
-        children: [ /* ... */ ]
+        children: [
+          '/high/fineCodeCheck.md',
+        ]
       },
       {
         title: '项目经验',
-        children: [ /* ... */ ]
+        children: [
+          '/high/fineCodeDom.md',          
+         ]
       },
       {
         title: '性能优化',

@@ -1,3 +1,4 @@
+
 ### 数据类型
 Number/string/boolean/Object/Null/undefined
 

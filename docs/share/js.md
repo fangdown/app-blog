@@ -22,7 +22,7 @@ destructuringArray([1, [2, 3], 4], '[a, [b ], c]') => {a: 1, b: 2, c: 3}, 无意
 一些额外的tips
 ```
 ### mqyqingfeng
-[原文链接](https://github.com/shiyangzhaoa/easy-tips)  
+[原文链接](https://github.com/mqyqingfeng/Blog)  
 ```html
 JavaScirpt深入之从原型到原型链
 JavaScript深入之词法作用域和动态作用域
