@@ -6,10 +6,12 @@
   "dependencies": {
     "vuepress": "^0.9.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "cross-env": "^5.1.6"
+  },
   "scripts": {
-    "docs:dev": "npx vuepress dev docs",
-    "docs:build": "npx vuepress build docs"
+    "docs:dev": "cross-env NODE_ENV=dev npx vuepress dev docs",
+    "docs:build": "cross-env NODE_ENV=prod npx vuepress build docs"
   },
   "author": "fangdown",
   "license": "ISC"

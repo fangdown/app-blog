@@ -1,3 +1,4 @@
+const env = process.env.NODE_ENV;
 module.exports = {
 
   // 如果你计划发布的站点是在某个仓库下，比如 https://github.com/fangdown/article ，则 base 需要指定为 /article/
@@ -15,7 +16,7 @@ module.exports = {
     ['link', { rel: 'icon', href: `/favicon.png` }]
   ],
 
-  serviceWorker: true,
+  serviceWorker: env === 'dev' ? false : true,
 
   // 配置 google 分析统计
   ga: '',
@@ -46,6 +47,7 @@ module.exports = {
           '/high/fine-code-check.md',
           '/high/fine-code-dom.md',
           '/high/fine-code-array.md',
+          '/high/fine-code-event.md',
         ]
       },
       {
