@@ -27,7 +27,7 @@ function removeEvent(ele, type, handle){
   if(ele.addEventListener){
     ele.removeEventListener(type, handle, false)
   } else if(ele.attchEvent){
-    ele.detachEvent('on'+type+, ele['temp']);
+    ele.detachEvent('on'+type+, handle);
   } else{
     ele['on'+type] = null;
   }

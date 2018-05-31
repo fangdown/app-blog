@@ -48,6 +48,7 @@ module.exports = {
           '/high/fine-code-dom.md',
           '/high/fine-code-array.md',
           '/high/fine-code-event.md',
+          '/high/fine-code-http.md',
         ]
       },
       {
