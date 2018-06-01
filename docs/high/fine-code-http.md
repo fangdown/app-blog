@@ -31,6 +31,4 @@ https = http + ssl/tls
 * 服务端： 我用私钥解密，获取里面的随机对称秘钥
 * 服务端： 用对称秘钥加密数据，并发给客户端
 * 客户端： 收到数据，用对称秘钥解密，建立通信
-![](https://images2017.cnblogs.com/blog/1260476/201711/1260476-20171116160813812-635766483.png)
-
 ![](http://7xs4tc.com1.z0.glb.clouddn.com/httpsCreat.png)
