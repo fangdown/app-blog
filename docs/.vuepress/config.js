@@ -53,6 +53,8 @@ module.exports = {
           '/high/fine-code-http.md',
           '/high/web-render.md',
           '/high/debounce.md',
+          '/high/throttle.md',
+          '/high/http-head-options.md',
         ]
       },
       {
