@@ -55,6 +55,7 @@ module.exports = {
           '/high/debounce.md',
           '/high/throttle.md',
           '/high/http-head-options.md',
+          '/high/AO-VO.md',
         ]
       },
       {
@@ -70,6 +71,12 @@ module.exports = {
         title: '项目经验',
         children: [
           '/experience/url-length.md',          
+         ]
+      },
+      {
+        title: '框架',
+        children: [
+          '/framework/vue.md',          
          ]
       },
       {
