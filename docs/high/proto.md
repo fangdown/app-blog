@@ -1,7 +1,7 @@
 ## 原型链
 ### 骨架
 ```
-实例.__proto__ = 构造函数.prototype
+实例.__proto__ = 构造函数.prototype
 
 ```
 - 一切皆对象
@@ -10,7 +10,7 @@
 - 一直往上查找的链路就是原型链
 
 ### 类型
-- 普通对象object
+- 普通对象object
 - 函数对象function  
 
 ```js
@@ -34,10 +34,10 @@
 ### 比喻
 康熙（Null）生了许多个儿子
 Object.prototype
-每个儿子本事都不一样
+每个儿子本事都不一样
 Function
 String Number Boolean Date  
 每个儿子又生了好多子女， 依次反复  
-不管怎么生，
+不管怎么生
 
-![](https://images2015.cnblogs.com/blog/831429/201512/831429-20151214115524240-1562559241.png)
+![](https://upload-images.jianshu.io/upload_images/4023562-5e5884245df81cae.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/700)

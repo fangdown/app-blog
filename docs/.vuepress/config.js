@@ -57,6 +57,12 @@ module.exports = {
           '/high/http-head-options.md',
           '/high/AO-VO.md',
           '/high/proto.md',
+          '/high/scope.md',
+          '/high/context.md',
+          '/high/this.md',
+          '/high/extend.md',
+          '/high/param.md',
+          '/high/closure.md',
         ]
       },
       {

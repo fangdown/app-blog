@@ -13,6 +13,10 @@
   临时：npm --registry https://registry.npm.taobao.org install express    
   永久：npm config set registry https://registry.npm.taobao.org
   安装cnpm： npm install -g cnpm --registry=https://registry.npm.taobao.org
+
+  删除代理
+  npm config delete registry
+
 ```
   
 3. 更新某个包
@@ -20,4 +24,7 @@
    查看版本 npm view vuepress versions  
    更新该版本 npm update vuepress
 ```
-   
+4. 更新npm
+```
+  npm install -g npm
+```
