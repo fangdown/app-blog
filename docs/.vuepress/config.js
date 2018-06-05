@@ -56,6 +56,7 @@ module.exports = {
           '/high/throttle.md',
           '/high/http-head-options.md',
           '/high/AO-VO.md',
+          '/high/proto.md',
         ]
       },
       {
