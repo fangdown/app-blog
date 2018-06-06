@@ -76,6 +76,7 @@ module.exports = {
           '/principle/new.md',
           '/principle/typeof-instanceof.md',
           '/principle/lazyload.md',
+          '/principle/event-bus.md',
         ]
       },
       {
@@ -99,7 +100,9 @@ module.exports = {
       },
       {
         title: '性能优化',
-        children: [ /* ... */ ]
+        children: [
+          '/optimization/performance.md'
+        ]
       },
       {
         title: 'web安全',
