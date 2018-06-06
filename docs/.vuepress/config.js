@@ -46,15 +46,13 @@ module.exports = {
       {
         title: '高级',
         children: [
-          '/high/fine-code-check.md',
-          '/high/fine-code-dom.md',
-          '/high/fine-code-array.md',
-          '/high/fine-code-event.md',
-          '/high/fine-code-http.md',
+          '/high/data-check.md',
+          '/high/dom.md',
+          '/high/array.md',
+          '/high/event.md',
           '/high/web-render.md',
           '/high/debounce.md',
           '/high/throttle.md',
-          '/high/http-head-options.md',
           '/high/AO-VO.md',
           '/high/proto.md',
           '/high/scope.md',
@@ -63,6 +61,12 @@ module.exports = {
           '/high/extend.md',
           '/high/param.md',
           '/high/closure.md',
+          '/high/deep-copy.md',
+          '/high/event-loop.md',
+          '/high/cross-domain.md',
+          '/high/http-head-param.md',
+          '/high/http-head-options.md',
+          '/high/http-connect.md',
         ]
       },
       {
@@ -83,6 +87,7 @@ module.exports = {
       {
         title: '框架',
         children: [
+          '/framework/react.md',
           '/framework/vue.md',          
          ]
       },
