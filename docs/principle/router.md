@@ -22,7 +22,7 @@
       this.routes = {}；
       this.currentUrl = '';
     }
-    // 设置路由键值对
+    // 设置路由键值对
     pushRoute(path, callback){
       this.routes[path] = callback || function(){}
     }
@@ -43,7 +43,7 @@
       window.addEventListener('load', this.refresh);
       window.addEventListener('hashchange', this.refresh);
     }
-    // 设置路由键值对
+    // 设置路由键值对
     pushRoute(path, callback){
       this.routes[path] = callback || function(){}
     }
@@ -68,7 +68,7 @@
       window.addEventListener('load', this.refresh);
       window.addEventListener('hashchange', this.refresh);
     }
-    // 设置路由键值对
+    // 设置路由键值对
     pushRoute(path, callback){
       this.routes[path] = callback || function(){}
     }
@@ -96,7 +96,7 @@
       ? this.currentIndex = 0
       : this.currentIndex =  this.currentIndex -1;
       location.hash = this.history[this.currentIndex];
-      this.route[this.history[this.currentIndex]]();
+      this.routes[this.history[this.currentIndex]]();
     }
   }
 ```
@@ -120,5 +120,55 @@
   </script>
 ```
 ### vue组件演示
-<router/>
+<router-hash/>
+
+
 ### 基于H5 History的前端路由实现
+#### 骨架
+1. 建立路由对象
+2. 初始化路由对象并执行
+3. 设置路由键值对
+4. 监听点击事件，获取path，并从对象中找到该key的函数并执行
+
+```js
+  class Routers{
+    constructor(){
+      this.routes = {};
+      this._bindPopState=_bindPopState.bind(this);
+    }
+    init(path){
+      history.replaceState(null, null, path);
+      this.routes[path] && this.routes[path]();
+    }
+    pushRoute(path, callback){
+      this.routes[path] = callback || function(){}
+    }
+    go(path){
+      history.pushState(null, null, path);
+      this.routes[path] && this.routes[path]();
+    }
+    _bindPopState() {
+      window.addEventListener('popstate', e => {
+        const path = e.state && e.state.path;
+        this.routes[path] && this.routes[path]();
+      });
+    }
+  }
+  var content = document.querySelector('body');
+  function changeBgColor(color) {
+    content.style.backgroundColor = color;
+  }
+  const routers = new Routers();
+  routers.init(location.pathname)
+  routers.pushRoute('/', function(){
+    changeBgColor('yellow')
+  });
+  routers.pushRoute('/blue', function(){
+    changeBgColor('blue')
+  });
+  routers.pushRoute('/green', function(){
+    changeBgColor('green')
+  });
+
+```
+<router-history/>

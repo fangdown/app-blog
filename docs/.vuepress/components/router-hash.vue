@@ -20,7 +20,7 @@
       window.addEventListener('load', this.refresh);
       window.addEventListener('hashchange', this.refresh);
     }
-    // 设置路由键值对
+    // 设置路由键值对
     pushRoute(path, callback){
       this.routes[path] = callback || function(){}
     }
