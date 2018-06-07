@@ -77,6 +77,7 @@ module.exports = {
           '/principle/typeof-instanceof.md',
           '/principle/lazyload.md',
           '/principle/event-bus.md',
+          '/principle/router.md',
         ]
       },
       {
