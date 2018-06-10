@@ -78,6 +78,7 @@ module.exports = {
           '/principle/lazyload.md',
           '/principle/event-bus.md',
           '/principle/router.md',
+          '/principle/defineProperty.md',
         ]
       },
       {
@@ -91,6 +92,7 @@ module.exports = {
         children: [
           '/framework/react.md',
           '/framework/vue.md',          
+          '/framework/vue-point1.md',          
          ]
       },
       {
