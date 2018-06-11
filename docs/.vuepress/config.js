@@ -85,6 +85,7 @@ module.exports = {
         title: '项目经验',
         children: [
           '/experience/url-length.md',          
+          '/experience/css-square.md',          
          ]
       },
       {
@@ -122,7 +123,8 @@ module.exports = {
         children: [
           '/share/git.md',
           '/share/js.md',
-          '/share/mvc.md'
+          '/share/mvc.md',
+          '/share/http.md'
         ]
       },
       {
