@@ -20,6 +20,7 @@
 10. 建立构造函数Watcher,其中含有两个方法get和update--该实例对象为订阅者
 11. 编译node，对属性进行watcher实例化
 12. 将文档插入到dom中。
+![](https://user-gold-cdn.xitu.io/2018/6/6/163d41869ea10f6d?imageView2/0/w/1280/h/960/format/webp/ignore-error/1)
 ```html
 <div id="app">
 		<input type="text" v-model="text">

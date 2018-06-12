@@ -94,6 +94,7 @@ module.exports = {
           '/framework/react.md',
           '/framework/vue.md',          
           '/framework/vue-point1.md',          
+          '/framework/react-high-component.md',          
          ]
       },
       {
