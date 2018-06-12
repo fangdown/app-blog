@@ -79,6 +79,7 @@ module.exports = {
           '/principle/event-bus.md',
           '/principle/router.md',
           '/principle/defineProperty.md',
+          '/principle/delegate.md',
         ]
       },
       {
