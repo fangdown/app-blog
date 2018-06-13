@@ -79,11 +79,8 @@ module.exports = {
           '/principle/event-bus.md',
           '/principle/router.md',
           '/principle/defineProperty.md',
-<<<<<<< HEAD
           '/principle/virtual-dom.md',
-=======
           '/principle/delegate.md',
->>>>>>> 46c1351f8d563ff74188ad488ecb409bf4f0190c
         ]
       },
       {
@@ -91,6 +88,7 @@ module.exports = {
         children: [
           '/experience/url-length.md',          
           '/experience/css-square.md',          
+          '/experience/normal-1.md',          
          ]
       },
       {
@@ -130,11 +128,8 @@ module.exports = {
           '/share/git.md',
           '/share/js.md',
           '/share/mvc.md',
-<<<<<<< HEAD
-          '/share/linux.md'
-=======
+          '/share/linux.md',
           '/share/http.md'
->>>>>>> 46c1351f8d563ff74188ad488ecb409bf4f0190c
         ]
       },
       {
