@@ -76,7 +76,7 @@
 					if(Dep.target){
 						dep.addSub(Dep.target) // watcher 实例
 					}
-					return val;
+					return val; // 很重要，不然vm中的该属性没有值
 				},
 				set: function(newVal){
 					if(val === newVal) {return;}

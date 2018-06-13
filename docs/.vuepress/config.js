@@ -79,6 +79,7 @@ module.exports = {
           '/principle/event-bus.md',
           '/principle/router.md',
           '/principle/defineProperty.md',
+          '/principle/virtual-dom.md',
         ]
       },
       {
@@ -122,7 +123,8 @@ module.exports = {
         children: [
           '/share/git.md',
           '/share/js.md',
-          '/share/mvc.md'
+          '/share/mvc.md',
+          '/share/linux.md'
         ]
       },
       {

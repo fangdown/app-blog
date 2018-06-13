@@ -134,7 +134,7 @@
   class Routers{
     constructor(){
       this.routes = {};
-      this._bindPopState=_bindPopState.bind(this);
+      this._bindPopState();
     }
     init(path){
       history.replaceState(null, null, path);
@@ -172,3 +172,14 @@
 
 ```
 <router-history/>
+
+
+### hash-histroy共同点和不同点
+1. 共同点
+- 需要一个构造函数
+- 设置routes对象
+- 设置routes对象方法pushRoute
+
+2. 不同点
+- 监听事件不一样，hash监听hashchange，history监听popstate
+- 对url处理不一样，hash是push(), history是pushState()
