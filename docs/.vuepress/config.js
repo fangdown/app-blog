@@ -67,6 +67,8 @@ module.exports = {
           '/high/http-head-param.md',
           '/high/http-head-options.md',
           '/high/http-connect.md',
+          '/high/iframe.md',
+          '/high/ajax-axios-fetch.md',
         ]
       },
       {
@@ -81,6 +83,7 @@ module.exports = {
           '/principle/defineProperty.md',
           '/principle/virtual-dom.md',
           '/principle/delegate.md',
+          '/principle/desin.md',
         ]
       },
       {
@@ -89,6 +92,8 @@ module.exports = {
           '/experience/url-length.md',          
           '/experience/css-square.md',          
           '/experience/normal-1.md',          
+          '/experience/webpack4-css-module.md',          
+          '/experience/eslint-rule.md',          
          ]
       },
       {
@@ -109,7 +114,8 @@ module.exports = {
       {
         title: '性能优化',
         children: [
-          '/optimization/performance.md'
+          '/optimization/performance.md',
+          '/optimization/react-optimize-tx.md'
         ]
       },
       {
@@ -129,7 +135,8 @@ module.exports = {
           '/share/js.md',
           '/share/mvc.md',
           '/share/linux.md',
-          '/share/http.md'
+          '/share/http.md',
+          '/share/interview.md'
         ]
       },
       {
