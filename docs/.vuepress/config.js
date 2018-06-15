@@ -103,6 +103,7 @@ module.exports = {
           '/framework/vue.md',          
           '/framework/vue-point1.md',          
           '/framework/react-high-component.md',          
+          '/framework/vue-transition.md',          
          ]
       },
       {
