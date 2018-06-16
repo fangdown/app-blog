@@ -1,6 +1,6 @@
-## React知识
+## React-bind
 ### 绑定this
-> 推荐使用定义阶段用箭头函数定义()=>
+> 推荐使用定义阶段用箭头函数定义()=>
 > 见过各种各样的，但是没有形成统一认识。
 
 
@@ -20,7 +20,7 @@ class App extends React.Component {
 ```
 问题： 组件每次render都会重新分配函数，这比较影响性能。
 
-3. 返回一个函数 + handleClick()
+3. 返回一个函数 + handleClick()
  ```js
 class App extends React.Component {
   handleClick() {

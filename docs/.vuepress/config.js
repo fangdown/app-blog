@@ -99,11 +99,15 @@ module.exports = {
       {
         title: '框架',
         children: [
-          '/framework/react.md',
           '/framework/vue.md',          
           '/framework/vue-point1.md',          
-          '/framework/react-high-component.md',          
           '/framework/vue-transition.md',          
+          '/framework/react-bind.md',
+          '/framework/react-life.md',          
+          '/framework/react-high-component.md',          
+          '/framework/react-diff.md',          
+          '/framework/react-mind.md',          
+          '/framework/react-redux.md',          
          ]
       },
       {

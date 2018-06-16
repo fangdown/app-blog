@@ -1,4 +1,4 @@
-## Vue知识点1
+## Vue 知识点1
 ### 整体生态全局
 ![](https://user-gold-cdn.xitu.io/2018/6/8/163dd402808287f7?imageView2/0/w/1280/h/960/format/webp/ignore-error/1)
 1. vue-cli脚手架中各目录和文件的作用
