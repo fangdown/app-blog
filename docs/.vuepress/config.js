@@ -40,7 +40,10 @@ module.exports = {
         title: '基础',
         collapsable: false,
         children: [
-          '/basis/dataType.md'
+          '/basis/dataType.md',
+          '/basis/code-literacy.md',
+          '/basis/line-clamp.md',
+          '/basis/css-level.md',
         ]
       },
       {
@@ -99,6 +102,8 @@ module.exports = {
       {
         title: '框架',
         children: [
+          '/framework/webpack.md',          
+          '/framework/vue-framework.md',          
           '/framework/vue.md',          
           '/framework/vue-point1.md',          
           '/framework/vue-transition.md',          
@@ -120,7 +125,7 @@ module.exports = {
         title: '性能优化',
         children: [
           '/optimization/performance.md',
-          '/optimization/react-optimize-tx.md'
+          '/optimization/react-optimize-tx.md',
         ]
       },
       {
@@ -141,7 +146,8 @@ module.exports = {
           '/share/mvc.md',
           '/share/linux.md',
           '/share/http.md',
-          '/share/interview.md'
+          '/share/interview.md',
+          '/share/framework.md',
         ]
       },
       {
