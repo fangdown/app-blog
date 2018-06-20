@@ -2,7 +2,7 @@ const env = process.env.NODE_ENV;
 module.exports = {
 
   // 如果你计划发布的站点是在某个仓库下，比如 https://github.com/fangdown/article ，则 base 需要指定为 /article/
-  base: '/article/',
+  base: '/',
 
   // 站点标题，在默认主题中会显示在导航栏左侧
   title: '思维发散',
@@ -103,6 +103,7 @@ module.exports = {
         title: '框架',
         children: [
           '/framework/webpack.md',          
+          '/framework/webpack-plugins.md',          
           '/framework/vue-framework.md',          
           '/framework/vue.md',          
           '/framework/vue-point1.md',          
