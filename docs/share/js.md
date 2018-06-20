@@ -47,3 +47,8 @@ JavaScript深入系列15篇正式完结！
 vue源码学习
 vue高阶组件
 ```
+### 古兰精
+[原文](http://www.cnblogs.com/goloving/)
+```
+vue es6等
+```
