@@ -105,6 +105,7 @@ module.exports = {
         children: [
           '/framework/webpack.md',          
           '/framework/webpack-plugins.md',          
+          '/framework/webpack-dev.md',          
           '/framework/vue-framework.md',          
           '/framework/vue.md',          
           '/framework/vue-point1.md',          
