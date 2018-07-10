@@ -99,6 +99,7 @@ module.exports = {
           '/experience/eslint-rule.md',          
           '/experience/vue-eslint.md',          
           '/experience/less-rem.md',          
+          '/experience/package-lock.md',          
          ]
       },
       {
