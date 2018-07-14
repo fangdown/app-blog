@@ -100,6 +100,8 @@ module.exports = {
           '/experience/vue-eslint.md',          
           '/experience/less-rem.md',          
           '/experience/package-lock.md',          
+          '/experience/fetch-timeout.md',          
+          '/experience/wxgzh.md',          
          ]
       },
       {
