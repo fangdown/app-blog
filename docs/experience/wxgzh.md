@@ -45,4 +45,8 @@ const isWxClient = () => {
         wx.onMenuShareAppMessage(shareData)
     }
 ```
+4. 微信后退引发的循环
+> 主要是授权会增加历史记录，解决方法是写入一个sessionCode，并判断
 
+
+[微信静默授权增加浏览器历史记录导致跳转死循环的解决方案](https://blog.csdn.net/shunqixing/article/details/80189410)
