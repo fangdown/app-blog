@@ -102,6 +102,7 @@ module.exports = {
           '/experience/package-lock.md',          
           '/experience/fetch-timeout.md',          
           '/experience/wxgzh.md',          
+          '/experience/babel-polyfill.md',          
          ]
       },
       {
