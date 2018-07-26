@@ -1,0 +1,25 @@
+
+.main {
+  height: 100%;
+  overflow-x: hidden;
+  // 弹窗Y轴会出滚动条
+  overflow-y: hidden;
+  :global(.ant-layout):global(.ant-layout-has-sider) > :global(.ant-layout),
+  :global(.ant-layout):global(.ant-layout-has-sider) > :global(.ant-layout-content) {
+    overflow-x: auto;
+  }
+}
+.layout{
+  position: relative;
+}
+
+.content {
+  position: absolute;
+  left: 146px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: 30px 30px 0 30px;
+  overflow: auto;
+  background-color: #fff;
+}

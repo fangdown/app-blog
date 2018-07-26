@@ -40,6 +40,7 @@ module.exports = {
         title: '基础',
         collapsable: false,
         children: [
+          '/share/interview.md',
           '/basis/dataType.md',
           '/basis/code-literacy.md',
           '/basis/line-clamp.md',
