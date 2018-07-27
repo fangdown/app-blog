@@ -129,3 +129,38 @@
 		new Drag(box2)
 
 ```
+8. input事件监听,联想并完成填充
+```js
+  var arr = ['a', 'aaa', 'b']
+  input.addEventListener('input', function(event){
+   const event = event || window.event;
+    const target = event.target || event.srcElement
+    const value = target.value;
+    if(!value) return;
+    autoComplete(value, arr)
+  })
+  function autoComplete(str, arr){
+    const list = []
+    for(let i = 0; i< arr.length; i++){
+      if(arr[i].startWidth(str)){
+        list.push('<li>' +arr[i] +'</li>')
+      }
+    }
+    ul.innerHtml = list.join('');
+  }
+  ul.addEventListener('click', function(event){
+     const event = event || window.event;
+     const target = event.target || event.srcElement
+     if(target.name.toLowerCase() === 'li'){
+       addToInput(event.target)
+     }
+  })
+  function addToInput(li){
+    const text = li.innerText;
+    input.value = text;
+  }
+```
+9. 为什么vue要引入虚拟dom
+  - 组件的高度抽象化
+  - 服务端渲染ssr、dom外
+  - 跨平台 weex
