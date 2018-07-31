@@ -104,6 +104,7 @@ module.exports = {
           '/experience/fetch-timeout.md',          
           '/experience/wxgzh.md',          
           '/experience/babel-polyfill.md',          
+          '/experience/online-debugger.md',          
          ]
       },
       {
