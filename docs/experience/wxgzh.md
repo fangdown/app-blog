@@ -50,3 +50,9 @@ const isWxClient = () => {
 
 
 [微信静默授权增加浏览器历史记录导致跳转死循环的解决方案](https://blog.csdn.net/shunqixing/article/details/80189410)
+
+5. 微信后退流程
+```js
+
+```
+(./wxbackflow.png)[]
