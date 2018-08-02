@@ -45,6 +45,7 @@ module.exports = {
           '/basis/code-literacy.md',
           '/basis/line-clamp.md',
           '/basis/css-level.md',
+          '/basis/linux.md',
         ]
       },
       {
