@@ -89,6 +89,7 @@ module.exports = {
           '/principle/virtual-dom.md',
           '/principle/delegate.md',
           '/principle/desin.md',
+          '/principle/promise.md',
         ]
       },
       {
@@ -111,6 +112,7 @@ module.exports = {
       {
         title: '框架',
         children: [
+          '/framework/node.md',          
           '/framework/webpack.md',          
           '/framework/webpack-plugins.md',          
           '/framework/webpack-dev.md',          
