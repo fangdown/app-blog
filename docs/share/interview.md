@@ -164,3 +164,39 @@
   - 组件的高度抽象化
   - 服务端渲染ssr、dom外
   - 跨平台 weex
+10. 模拟实现promise
+11. nodejs中的流
+12. nodejs import 和export.module区别
+13. 快排算法，复杂度
+14. csrf怎么样获取客户端信息
+15. 如何渲染几万条数据并不卡住界面
+```js
+  // 思路：异步执行，新建loop函数，判断渲染次数有没有到达最多次数，没有就执行增加，同时利用window.requestAnimationFrame，在界面重新渲染的之前执行新增方法，不卡顿
+  setTimeout(() => {
+    const total = 10000;
+    const once = 20;
+    const loopCount = Math.ceil(total / once);
+    let countRender = 0;
+    let ul = document.querySelector('ul');
+    function add() {
+      const fragment = document.createDocumentFragment();
+      for (let i = 0; i < once; i++) {
+        const li = document.createElement('li');
+        li.innerText = Math.floor(Math.random() * total);
+        fragment.appendChild(li);
+      }
+      ul.appendChild(fragment);
+      countRender += 1;
+      loop()
+    }
+    function loop() {
+      if (countRender < loopCount) {
+        // requestAnimationFrame里的不是执行函数，而是函数名
+        window.requestAnimationFrame(add);
+        // add()
+      }
+    }
+    loop();
+  }, 0);
+
+```

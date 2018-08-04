@@ -118,6 +118,8 @@ module.exports = {
           '/framework/webpack-dev.md',          
           '/framework/vue-framework.md',          
           '/framework/vue.md',          
+          '/framework/vue-life.md',          
+          '/framework/vue-nextTick.md',          
           '/framework/vue-point1.md',          
           '/framework/vue-transition.md',          
           '/framework/react-bind.md',
@@ -126,6 +128,7 @@ module.exports = {
           '/framework/react-diff.md',          
           '/framework/react-mind.md',          
           '/framework/react-redux.md',          
+          '/framework/react-fiber.md',          
          ]
       },
       {
