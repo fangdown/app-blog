@@ -11,7 +11,12 @@
 6. postMessage + iframe - H5新特性 postMessage onMessage
 7. ngix反向代理 
 8. 浏览器设置跨域 - 供开发使用
-
+   
+### 同源政策限制
+同源策略的限制：
+存储在浏览器中的数据，如localStroage、Cooke和IndexedDB不能通过脚本跨域访问
+不能通过脚本操作不同域下的DOM
+不能通过ajax请求不同域的数据
 ### 详情
 1. cors，跨域资源共享，设置head信息
 ![](./cors.jpg)
