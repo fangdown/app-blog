@@ -142,6 +142,7 @@ module.exports = {
         children: [
           '/optimization/performance.md',
           '/optimization/react-optimize-tx.md',
+          '/optimization/base64.md',
         ]
       },
       {
