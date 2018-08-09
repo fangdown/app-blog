@@ -46,6 +46,7 @@ module.exports = {
           '/basis/line-clamp.md',
           '/basis/css-level.md',
           '/basis/linux.md',
+          '/basis/css-inherit.md',
         ]
       },
       {
@@ -90,6 +91,7 @@ module.exports = {
           '/principle/delegate.md',
           '/principle/desin.md',
           '/principle/promise.md',
+          '/principle/touch-direction.md',
         ]
       },
       {
