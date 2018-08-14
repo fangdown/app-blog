@@ -200,3 +200,13 @@
   }, 0);
 
 ```
+16. 递归设计。 实现一个函数，给该函数一个DOM节点，函数访问其所有子元素(所有子元素，不仅仅是直接子元素)，每次访问子元素的时候，并为其传一个callback.
+```js
+  function traverse(DOM, callback){
+    callback(DOM)
+    var list = DOM.children;
+    Array.prototype.forEach.apply(list, (item) => {
+      traverse(item, callback)
+    })
+  }
+```

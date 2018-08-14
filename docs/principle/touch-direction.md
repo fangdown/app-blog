@@ -2,6 +2,21 @@
 1. 监听touch事件，获取坐标点
 2. 根据两次的坐标点，获取方向
 3. 根据移动距离计算角度
+知识点：
+- touches：表示当前跟踪的触摸操作的touch对象的数组。
+- targetTouches：特定于事件目标的Touch对象的数组。
+- changeTouches：表示自上次触摸以来发生了什么改变的Touch对象的数组。
+
+每个Touch对象包含的属性如下。
+
+- clientX：触摸目标在视口中的x坐标。
+- clientY：触摸目标在视口中的y坐标。
+- identifier：标识触摸的唯一ID。
+- pageX：触摸目标在页面中的x坐标。
+- pageY：触摸目标在页面中的y坐标。
+- screenX：触摸目标在屏幕中的x坐标。
+- screenY：触摸目标在屏幕中的y坐标。
+- target：触目的DOM节点目标。
 
 ```js
 var startX, startY;

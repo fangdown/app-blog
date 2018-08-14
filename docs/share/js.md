@@ -52,3 +52,5 @@ vue高阶组件
 ```
 vue es6等
 ```
+### 等风来
+[原文](http://www.cnblogs.com/mengff/tag/JavaScript/)
