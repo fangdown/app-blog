@@ -116,6 +116,7 @@ module.exports = {
         children: [
           '/framework/node.md',          
           '/framework/webpack.md',          
+          '/framework/webpack-mind.md',          
           '/framework/webpack-plugins.md',          
           '/framework/webpack-dev.md',          
           '/framework/vue-framework.md',          

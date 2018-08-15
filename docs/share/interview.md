@@ -210,3 +210,36 @@
     })
   }
 ```
+17. commonJs module.exports  与 es6中的 export export default区别
+  <strong>commonJs规范</strong>
+>require: node 和 es6 都支持的引入
+export / import : 只有es6 支持的导出引入
+module.exports / exports: 只有 node 支持的导出
+- node模块遵循CommonJS规范。
+- module.export导出一个对象
+- 用require导入
+- exports = module.exports = {};
+ <strong>es6规范</strong>
+- import 导入
+- export 导出 多个值，导入时要用解构赋值方法
+- export default 只导出一个值
+
+18. DOM0级事件和DOM2级事件区别
+- 注册事件的方式不同
+- DOM0级 this指向元素，DOM2级this没有明确指向
+- 浏览器事件派发，0级派发给元素， 2级有捕获-目标-冒泡 三阶段
+- 0级只对事件的类型进行分类，如鼠标和键盘事件。2级事件模型是模块化的，分为htmlEvent,MouseEvent,UIEvent,分别实现不同的接口
+
+19. 为什么在vue的组件中，data要用function返回对象呢？
+> 类比与引用数据类型。如果不用function return 每个组件的data都是内存的同一个地址，那一个数据改变其他也改变了，这当然就不是我们想要的。用function return 其实就相当于申明了新的变量，相互独立，自然就不会有这样的问题；js在赋值object对象时，是直接一个相同的内存地址。所以为了每个组件的data独立，采用了这种方式。
+如果不是组件的话，正常data的写法可以直接写一个对象，比如data：{ msg ： ' 下载 ' }，但由于组件是会在多个地方引用
+的，JS中直接共享对象会造成引用传递，也就是说修改了msg后所有按钮的msg都会跟着修改，所以这里用function来每次返回一个
+20. let 作用域
+```js
+let a = 1;
+if(true){
+  console.log(a) 
+  let a = 2
+}
+// a is not defined
+```
