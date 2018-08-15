@@ -47,6 +47,7 @@ module.exports = {
           '/basis/css-level.md',
           '/basis/linux.md',
           '/basis/css-inherit.md',
+          '/share/fav-link.md',
         ]
       },
       {
