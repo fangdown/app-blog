@@ -243,3 +243,23 @@ if(true){
 }
 // a is not defined
 ```
+21. 闭包遇上箭头函数
+```js
+var name = 'a'
+var obj = {
+  name : 'test',
+  boo: function(){
+    return function(){
+      console.log(this.name)
+    }
+  },
+  foo: function(){
+    return ()=>{
+      console.log(this.name)
+    }
+  }
+}
+obj.boo()() // a
+obj.foo()() // test
+
+```
