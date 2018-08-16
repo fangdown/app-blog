@@ -54,3 +54,7 @@ vue es6等
 ```
 ### 等风来
 [原文](http://www.cnblogs.com/mengff/tag/JavaScript/)
+
+### MP-WeUI
+[原文链接](https://youngluo.github.io/mp-weui/)  
+微信小程序UI库

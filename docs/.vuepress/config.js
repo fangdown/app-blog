@@ -40,14 +40,10 @@ module.exports = {
         title: '基础',
         collapsable: false,
         children: [
-          '/share/interview.md',
           '/basis/dataType.md',
           '/basis/code-literacy.md',
-          '/basis/line-clamp.md',
-          '/basis/css-level.md',
-          '/basis/linux.md',
-          '/basis/css-inherit.md',
-          '/share/fav-link.md',
+          '/basis/fav-link.md',
+          '/basis/fav-blog.md',
         ]
       },
       {
@@ -96,16 +92,27 @@ module.exports = {
         ]
       },
       {
+        title: 'css',
+        children: [
+          '/css/css-inherit.md',
+          '/css/css-level.md',
+          '/css/css-square.md',
+          '/css/less-rem.md',
+          '/css/line-clamp.md',
+        ]
+      },
+      {
+        title: '浏览器',
+        children: [
+          '/browser/http2.md',
+        ]
+      },
+      {
         title: '项目经验',
         children: [
-          '/experience/url-length.md',          
-          '/experience/css-square.md',          
+          '/experience/compat.md',              
+          '/experience/url-length.md',              
           '/experience/normal-1.md',          
-          '/experience/webpack4-css-module.md',          
-          '/experience/eslint-rule.md',          
-          '/experience/vue-eslint.md',          
-          '/experience/less-rem.md',          
-          '/experience/package-lock.md',          
           '/experience/fetch-timeout.md',          
           '/experience/wxgzh.md',          
           '/experience/babel-polyfill.md',          
@@ -113,33 +120,46 @@ module.exports = {
          ]
       },
       {
-        title: '框架',
+        title: 'react',
         children: [
-          '/framework/node.md',          
-          '/framework/webpack.md',          
-          '/framework/webpack-mind.md',          
-          '/framework/webpack-plugins.md',          
-          '/framework/webpack-dev.md',          
-          '/framework/vue-framework.md',          
-          '/framework/vue.md',          
-          '/framework/vue-life.md',          
-          '/framework/vue-nextTick.md',          
-          '/framework/vue-point1.md',          
-          '/framework/vue-transition.md',          
-          '/framework/react-bind.md',
-          '/framework/react-life.md',          
-          '/framework/react-high-component.md',          
-          '/framework/react-diff.md',          
-          '/framework/react-mind.md',          
-          '/framework/react-redux.md',          
-          '/framework/react-fiber.md',          
-         ]
+          '/react/react-bind.md',
+          '/react/react-life.md',          
+          '/react/react-high-component.md',          
+          '/react/react-diff.md',          
+          '/react/react-mind.md',          
+          '/react/react-redux.md',          
+          '/react/react-fiber.md',    
+        ]
       },
       {
-        title: '兼容性',
+        title: 'vue',
         children: [
-          '/compat/1.md',          
-         ]
+          '/vue/vue-eslint.md',
+          '/vue/vue-framework.md',          
+          '/vue/vue.md',          
+          '/vue/vue-life.md',          
+          '/vue/vue-nextTick.md',          
+          '/vue/vue-point1.md',          
+          '/vue/vue-transition.md',         
+        ]
+      },
+      {
+        title: 'nodejs',
+        children: [
+          '/node/node.md',          
+        ]
+      },
+      {
+        title: 'webpack',
+        children: [
+          '/webpack/webpack4-css-module.md',    
+          '/webpack/package-lock.md',          
+          '/webpack/eslint-rule.md',     
+          '/webpack/webpack.md',          
+          '/webpack/webpack-mind.md',          
+          '/webpack/webpack-plugins.md',          
+          '/webpack/webpack-dev.md',               
+        ]
       },
       {
         title: '性能优化',
@@ -147,6 +167,7 @@ module.exports = {
           '/optimization/performance.md',
           '/optimization/react-optimize-tx.md',
           '/optimization/base64.md',
+          '/optimization/webpack-splitChunks.md',
         ]
       },
       {
@@ -157,25 +178,22 @@ module.exports = {
         ]
       },
       {
-        title: '新特性',
-        children: [ /* ... */ ]
-      },
-      {
-        title: '干货分享',
+        title: '协作',
         children: [
-          '/share/git.md',
-          '/share/js.md',
-          '/share/mvc.md',
-          '/share/linux.md',
-          '/share/http.md',
-          '/share/interview.md',
-          '/share/framework.md',
+          '/team/git.md',          
         ]
       },
       {
-        title: '挑战点',
+        title: '后端',
         children: [
-          '/pains/201805.md'
+          '/server/linux.md',
+        ]
+      },
+      {
+        title: '练习',
+        children: [
+          '/training/question.md',
+          '/training/training-1.md'
         ]
       }
     ]

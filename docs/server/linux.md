@@ -19,4 +19,5 @@
 18. 远程主机执行命令 rsh 
 19. ftp传输 ftp xxx.cn
 20. 本地与远程直接复制文件 rcp file host:file2
+[mac命令](https://www.cnblogs.com/dongsheng/articles/2760057.html) 
     
