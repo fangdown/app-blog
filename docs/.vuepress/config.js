@@ -154,6 +154,7 @@ module.exports = {
         children: [
           '/webpack/webpack4-css-module.md',    
           '/webpack/package-lock.md',          
+          '/webpack/package.md',          
           '/webpack/eslint-rule.md',     
           '/webpack/webpack.md',          
           '/webpack/webpack-mind.md',          
