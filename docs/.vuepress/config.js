@@ -72,6 +72,7 @@ module.exports = {
           '/high/http-connect.md',
           '/high/iframe.md',
           '/high/ajax-axios-fetch.md',
+          '/high/async-js.md',
         ]
       },
       {
@@ -99,6 +100,7 @@ module.exports = {
           '/css/css-square.md',
           '/css/less-rem.md',
           '/css/line-clamp.md',
+          '/css/vertial-middle.md',
         ]
       },
       {
@@ -168,6 +170,16 @@ module.exports = {
           '/optimization/react-optimize-tx.md',
           '/optimization/base64.md',
           '/optimization/webpack-splitChunks.md',
+          '/optimization/etag.md',
+          '/optimization/cdn.md',
+          '/optimization/dns-prefetch.md',
+          '/optimization/common.md',
+          '/optimization/much-domain.md',
+          '/optimization/cookie .md',
+          '/optimization/css-block.md',
+          '/optimization/js-block.md',
+          '/optimization/js-common.md',
+          '/optimization/reflow-repaint.md',
         ]
       },
       {
