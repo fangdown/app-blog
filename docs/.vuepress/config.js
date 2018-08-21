@@ -179,6 +179,14 @@ module.exports = {
         ]
       },
       {
+        title: '算法',
+        children: [
+          '/arithmetic/binarySearch.md',          
+          '/arithmetic/quickSort.md',          
+          '/arithmetic/binaryTreeMinDept.md',          
+        ]
+      },
+      {
         title: '协作',
         children: [
           '/team/git.md',          
