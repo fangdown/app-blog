@@ -176,7 +176,7 @@ module.exports = {
           '/optimization/dns-prefetch.md',
           '/optimization/common.md',
           '/optimization/much-domain.md',
-          '/optimization/cookie .md',
+          '/optimization/cookie.md',
           '/optimization/css-block.md',
           '/optimization/js-block.md',
           '/optimization/js-common.md',
