@@ -263,3 +263,6 @@ obj.boo()() // a
 obj.foo()() // test
 
 ```
+22. no-cache和no-store的区别
+  - no-store是真正的不进行缓存
+  - no-cache是防止从缓存中获取过期的资源，缓存会向服务器进行有效处理确认之后处理资源

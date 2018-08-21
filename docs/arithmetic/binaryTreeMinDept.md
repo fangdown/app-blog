@@ -1,6 +1,6 @@
 ## 二叉树最小深度
 ```js
-var minDepth = function (root){
+var minDepth = function (root){
   if(root === null) return 0
   var leftMin = minDepth(root.left);
   var rightMin = minDepth(root.right);
@@ -11,7 +11,7 @@
   return Math.min(leftMin, rightMin) + 1
 }
 ```
-### 思路
+### 思路
 - 判断是否为空 
 - 判断左侧left是否为空
 - 判断右侧是否为空

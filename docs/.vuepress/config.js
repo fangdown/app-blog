@@ -50,10 +50,8 @@ module.exports = {
         title: '高级',
         children: [
           '/high/data-check.md',
-          '/high/dom.md',
+         
           '/high/array.md',
-          '/high/event.md',
-          '/high/web-render.md',
           '/high/debounce.md',
           '/high/throttle.md',
           '/high/AO-VO.md',
@@ -65,11 +63,6 @@ module.exports = {
           '/high/param.md',
           '/high/closure.md',
           '/high/deep-copy.md',
-          '/high/event-loop.md',
-          '/high/cross-domain.md',
-          '/high/http-head-param.md',
-          '/high/http-head-options.md',
-          '/high/http-connect.md',
           '/high/iframe.md',
           '/high/ajax-axios-fetch.md',
           '/high/async-js.md',
@@ -107,6 +100,15 @@ module.exports = {
         title: '浏览器',
         children: [
           '/browser/http2.md',
+          '/browser/http-head-param.md',
+          '/browser/http-head-options.md',
+          '/browser/http-connect.md',
+          '/browser/http-cache.md',
+          '/browser/cross-domain.md',
+          '/browser/web-render.md',
+          '/browser/event.md',
+          '/browser/event-loop.md',
+          '/browser/dom.md',
         ]
       },
       {
