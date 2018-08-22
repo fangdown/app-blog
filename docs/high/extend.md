@@ -5,7 +5,7 @@
 1. 构造函数继承
 2. 原型链继承
 3. 组合继承
-
+4. es6继承
 ### 原型链继承
 ```js
 Child.protype = new Parent()
@@ -36,4 +36,21 @@ function Child (name, age) {
 
 Child.prototype = new Parent();
 Child.prototype.constructor = Child;
+```
+### es6继承
+```js
+    class Parent{
+      constructor(){
+        this.name = 'fang'
+      }
+      getName(){
+        console.log(this.name)
+      }
+    }
+    class Child extends Parent{
+        constructor(){
+          super()
+          this.name = 'lulu'
+        }
+    }
 ```

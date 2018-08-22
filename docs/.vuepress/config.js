@@ -188,8 +188,9 @@ module.exports = {
       {
         title: 'web安全',
         children: [
-          '/safe/XSS.md',
-          '/safe/http-jiechi.md'
+          '/safe/common.md',
+          '/safe/http-jiechi.md',
+          '/safe/interface.md'
         ]
       },
       {

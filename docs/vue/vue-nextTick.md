@@ -1,5 +1,21 @@
 ## nextTick原理分析
 Vue中的nextTick涉及到Vue中DOM的异步更新，感觉很有意思，特意了解了一下。其中关于nextTick的源码涉及到不少知识，很多不太理解，暂且根据自己的一些感悟介绍下nextTick。
+
+vue的nextTick是用浏览器支持的方法模拟nodejs的process.nextTick
+
+老版本的vue用如下方法来模拟
+
+Promise.then
+MutationObserver(MutationObserver由于兼容性原因被下课)
+setTimeout(fn,0)
+
+新版本的vue用如下方法来模拟
+
+Promise.then
+setImmediate(仅有IE10+和Edge支持，其他浏览器都不支持)
+MessageChannel(MutationObserver被替换为MessageChannel)
+setTimeout(fn,0)
+
 ### 示例
 先来一个示例了解下关于Vue中的DOM更新以及nextTick的作用。
 

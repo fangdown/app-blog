@@ -21,7 +21,7 @@
   align-items:Center;
 }
 ```
-### absoulute
+### absolute
 ```html
 .box1{position:relative;}
 .box1 span{
