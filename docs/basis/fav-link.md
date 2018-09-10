@@ -4,3 +4,5 @@
 3. [Webpack 4 教程：从零配置到生产发布（2018）](http://www.css88.com/archives/9436)
 4. [学习HTML5 Canvas这一篇文章就够了](https://blog.csdn.net/u012468376/article/details/73350998)
 5. [函数生成器function* (){}](https://www.cnblogs.com/yuzhengbo/p/6807914.html)
+6. [我是怎么把一个项目带崩的](https://www.cnblogs.com/zer0Black/p/9463206.html)
+7. [H5单页面手势滑屏切换原理](https://www.cnblogs.com/onepixel/p/5300445.html)
