@@ -47,3 +47,6 @@
 
   3、git merge ‘误删编号’： 本地合并误删的文件内容
   ```
+
+  6. git commit -m 和 -am的区别
+  [区别](https://www.cnblogs.com/xiaohuochai/p/6664451.html)
