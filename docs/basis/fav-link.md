@@ -6,3 +6,4 @@
 5. [函数生成器function* (){}](https://www.cnblogs.com/yuzhengbo/p/6807914.html)
 6. [我是怎么把一个项目带崩的](https://www.cnblogs.com/zer0Black/p/9463206.html)
 7. [H5单页面手势滑屏切换原理](https://www.cnblogs.com/onepixel/p/5300445.html)
+8. [201809面试总结](https://juejin.im/post/5b94d8965188255c5a0cdc02)

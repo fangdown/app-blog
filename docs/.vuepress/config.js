@@ -51,6 +51,7 @@ module.exports = {
         children: [
           '/high/data-check.md',
          
+          '/high/canvas.md',
           '/high/array.md',
           '/high/debounce.md',
           '/high/throttle.md',
@@ -164,6 +165,7 @@ module.exports = {
           '/webpack/webpack-mind.md',          
           '/webpack/webpack-plugins.md',          
           '/webpack/webpack-dev.md',               
+          '/webpack/loader.md',               
         ]
       },
       {
