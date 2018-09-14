@@ -44,6 +44,7 @@ module.exports = {
           '/basis/code-literacy.md',
           '/basis/fav-link.md',
           '/basis/fav-blog.md',
+          '/basis/js-knotty.md',
         ]
       },
       {
@@ -218,6 +219,7 @@ module.exports = {
       {
         title: '练习',
         children: [
+          '/training/soulSoother.md',
           '/training/target.md',
           '/training/question.md',
           '/training/training-1.md'
