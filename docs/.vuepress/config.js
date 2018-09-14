@@ -50,7 +50,7 @@ module.exports = {
         title: '高级',
         children: [
           '/high/data-check.md',
-         
+          '/high/algorithm.md',
           '/high/canvas.md',
           '/high/array.md',
           '/high/debounce.md',
@@ -218,6 +218,7 @@ module.exports = {
       {
         title: '练习',
         children: [
+          '/training/target.md',
           '/training/question.md',
           '/training/training-1.md'
         ]

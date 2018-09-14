@@ -49,4 +49,5 @@
   ```
 
   6. git commit -m 和 -am的区别
+  简要区别： 已经提交过的文件，修改了，可以使用am一起，如果文件没有add过，则不能用am
   [区别](https://www.cnblogs.com/xiaohuochai/p/6664451.html)
