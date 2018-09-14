@@ -241,7 +241,7 @@ if(true){
   console.log(a) 
   let a = 2
 }
-// a is not defined
+// error  a is not defined
 ```
 21. 闭包遇上箭头函数
 ```js
@@ -266,3 +266,151 @@ obj.foo()() // test
 22. no-cache和no-store的区别
   - no-store是真正的不进行缓存
   - no-cache是防止从缓存中获取过期的资源，缓存会向服务器进行有效处理确认之后处理资源
+
+23. 两个超大数据相加
+> 思路
+- 将参数转换成数组
+- 将数组里的元素转换成数字
+- 从个位开始相加，遇10则前进一位
+- 补齐高位
+- 将数组转换成字符串
+- 分割成2个数组，相加数组，高位数组，最终合并
+```js
+function transToNumber(arr){  
+  var newArr = []
+  for(var i = 0, len = arr.length; i < len; i++){
+    newArr[i] = parseInt(arr[i])
+  }
+  return newArr
+}
+function add(d1, d2){
+  var arr1 = d1.split(''),
+      arr2 = d2.split('');
+  var newArr1 = transToNumber(arr1)
+  var newArr2 = transToNumber(arr2)
+  var maxArr,
+      minArr,
+      maxLen,
+      addArr = [];
+  var len1 = newArr1.length;
+  var len2 = newArr2.length;
+  if(len1 < len2){
+    maxArr = newArr2;
+    minArr = newArr1;
+    maxLen = newArr1.length;
+  } else {
+    maxArr = newArr1;
+    minArr = newArr2;
+    maxLen = newArr2.length;
+  }
+  var j = Math.abs(len1 - len2) // 计算差几位
+  for(var i = maxLen -1; i >= 0; i--){ 
+    addArr[i] = minArr[i] + maxArr[j + i]
+    if(addArr[i] > 10) {
+      addArr[i] -= 10;
+      maxArr[j + i - 1] += 1; // 进一位
+    }
+  }
+  var result = [];
+  for(var i = 0; i < j; i++){
+    result[i] = maxArr[i]
+  }
+  result = (result.concat(addArr)).join('')
+  console.log('result', result)
+  return result
+}
+add("1200000000000000000000000000000000","3333");
+```
+
+24. 实现deepEq函数，判断两个对象是否相等
+> 思路
+- 判断全等（0， -0）
+- 判断null undefined
+- 判断类型
+- 根据类型 正则-字符串
+- 根据类型 数字
+- 根据类型 日期和布尔值
+- 根据类型对象，获取自身属性数组，循环判断
+- 根据类型数组，转换成toString()字符串对比
+```js
+function deepEq(a, b) {
+  //如果a和b本来就全等
+  if (a === b) {
+    //判断是否为0和-0
+    return a !== 0 || 1 / a === 1 / b;
+  }
+  //判断是否为null和undefined
+  if (a == null || b == null) {
+    return a === b;
+  }
+  //接下来判断a和b的数据类型
+  var toString = Object.prototype.toString;
+  var classNameA = toString.call(a),
+    classNameB = toString.call(b);
+  //如果数据类型不相等，则返回false
+  if (classNameA !== classNameB) {
+    return false;
+  }
+  //如果数据类型相等，再根据不同数据类型分别判断
+  switch (classNameA) {
+    case '[object RegExp]':
+    case '[object String]':
+      //进行字符串转换比较
+      return '' + a === '' + b;
+    case '[object Number]':
+      //进行数字转换比较,判断是否为NaN
+      if (+a !== +a) {
+        return +b !== +b;
+      }
+      //判断是否为0或-0
+      return +a === 0 ? 1 / +a === 1 / b : +a === +b;
+    case '[object Date]':
+    case '[object Boolean]':
+      return +a === +b;
+  }
+  //如果是对象类型
+  if (classNameA == '[object Object]') {
+    //获取a和b的属性长度
+    var propsA = Object.getOwnPropertyNames(a),
+      propsB = Object.getOwnPropertyNames(b);
+    if (propsA.length != propsB.length) {
+      return false;
+    }
+    for (var i = 0; i < propsA.length; i++) {
+      var propName = propsA[i];
+      //如果对应属性对应值不相等，则返回false
+     // if (a[propName]) !== b[propName]) {
+       // return false;
+     // }
+      return deepEq(a[propName], b[propName] )
+    }
+    return true;
+  }
+  //如果是数组类型
+  if (classNameA == '[object Array]') {
+    if (a.toString() == b.toString()) {
+      return true;
+    }
+    return false;
+  }
+}
+// eq
+var a = [1, 2, [{name: 'fang'}, 1]]
+var b = [1, 2, [1, 3]]
+deepEq(a, b)
+var c = {
+  name: 'fang',
+  other: {
+    age: 20,
+    address: 'sz'
+  }
+}
+var d = {
+  name: 'fang',
+  other: {
+    age: 21,
+    address: 'sz'
+  }
+}
+deepEq(c, d)
+```
