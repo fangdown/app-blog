@@ -68,6 +68,7 @@ module.exports = {
           '/high/iframe.md',
           '/high/ajax-axios-fetch.md',
           '/high/async-js.md',
+          '/high/modules.md',
         ]
       },
       {

@@ -210,7 +210,7 @@
     })
   }
 ```
-17. commonJs module.exports  与 es6中的 export export default区别
+17. commonJs exports.module  与 es6中的 export export default区别
   <strong>commonJs规范</strong>
 >require: node 和 es6 都支持的引入
 export / import : 只有es6 支持的导出引入
