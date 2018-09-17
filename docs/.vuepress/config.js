@@ -69,6 +69,7 @@ module.exports = {
           '/high/ajax-axios-fetch.md',
           '/high/async-js.md',
           '/high/modules.md',
+          '/high/proxy.md',
         ]
       },
       {

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>definePrototype实现双向绑定</title>
+</head>
+<body>
+  <input type="text" id="a">
+  <span id="b"></span>
+  <script>
+    var obj = {}
+    var input = document.getElementById('a')
+    Object.defineProperty(obj,'name', {
+      set: function(newVal){
+        document.getElementById('b').innerHTML = newVal
+      }
+    })
+    input.addEventListener('keyup', function(e){
+      obj.name = e.target.value
+    })
+  </script>
+</body>
+</html>

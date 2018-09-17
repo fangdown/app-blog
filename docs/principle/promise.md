@@ -1,4 +1,6 @@
  ## 手动实现promise
+[示例](../demo/promise/promise.html)
+ 
  ```js
 //  达到效果
 function fn1(resolve, reject){

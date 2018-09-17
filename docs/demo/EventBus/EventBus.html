@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>实现EventBus</title>
+</head>
+<body>
+  <ul id="names"></ul>
+  <script>
+    class EventEmitter{
+      constructor(){
+        this.events = this.events || new Map()
+      }
+    }
+    EventEmitter.prototype.emit = function(type, ...args){
+      let handler = this.events.get(type);
+      if(Array.isArray(handler)){
+        for(let i = 0; i < handler.length; i++){
+          if(args.length > 0){
+            handler[i].apply(this, args)
+          } else{
+            handler[i].call(this)
+          }
+        }
+      } else {
+        if(args.length > 0){
+          handler.apply(this, args)
+        } else {
+          handler.call(this)
+        }
+      }
+      return true
+    }
+    EventEmitter.prototype.addListener = function(type, fn){
+      const handler = this.events.get(type)
+      if(!handler){
+        this.events.set(type, fn)
+      } else if(handler && typeof handler === 'function'){
+        this.events.set(type, [handler, fn])
+      } else {
+        handler.push(fn)
+      }
+    }
+    //eq 
+    const emitter = new EventEmitter()
+    emitter.addListener('name', name => {
+      console.log(` i am ${name}`)
+    })
+    emitter.addListener('name', name => {
+      console.log(` you are ${name}`)
+    })
+    emitter.emit('name', 'fang')
+  </script>
+</body>
+</html>
