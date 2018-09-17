@@ -66,5 +66,52 @@ function removeEvent(ele, type, handle){
   }
   
   ```
+### 禁止右键
+```html
+<body ondragstart="window.event.returnValue=false" oncontextmenu="window.event.returnValue=false" onselectstart="window.event.returnValue=false">
+```
+### 获取shift control alt按键
+```js
+  document.onclick = function(e){
+    var e = e || window.event
+    var keys = []
+    if(e.shiftKey){
+      keys.push('按了shift key')
+    } else if(e.controlKey){
+      keys.push('按了control key')
+    } else if(e.altKey){
+      keys.push('按了alt key')
+    }
+    console.log(keys)
+  }
+```
+### 获取滚轮方向
+```js
+var scrollDir = "down";
+var scrollFunc = function (e) {
+  e = e || window.event;
+  if (e.wheelDelta) {  //判断浏览器IE，谷歌滑轮事件               
+    if (e.wheelDelta > 0) { //当滑轮向上滚动时  
+      scrollDir = "up";
+    } else if (e.wheelDelta < 0) { //当滑轮向下滚动时  
+      scrollDir = "down";
+    }
+  } else if (e.detail) {  //Firefox滑轮事件  
+    if (e.detail > 0) { //当滑轮向上滚动时  
+      scrollDir = "down";
+    } else if (e.detail < 0) { //当滑轮向下滚动时  
+      scrollDir = "up";
+    }
+  }
+  console.log('scrollDir', scrollDir)
+}
+//给页面绑定滑轮滚动事件  
+if (document.addEventListener) {//firefox  
+  document.addEventListener('DOMMouseScroll', scrollFunc, false);
+}
+//滚动滑轮触发scrollFunc方法  //ie 谷歌  
+window.onmousewheel = document.onmousewheel = scrollFunc;
+
+```
 ### 简单图示
 ![图例](https://upload-images.jianshu.io/upload_images/12185313-7f48cbb2c54f72be.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/441)

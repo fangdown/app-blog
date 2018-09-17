@@ -45,7 +45,11 @@ var flag = document.createDocumentFragment('')
 children返回的是一个数组，数组向是一个元素
 childNodes 返回的也是一个数组，不过包含了换行
 
-#### 当前页面dom深度
+
+
+
+
+### 当前页面dom深度
 ```js
 const getDomDepth = (node) => {
   let max = 1;
