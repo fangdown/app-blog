@@ -155,6 +155,10 @@ module.exports = {
         title: 'nodejs',
         children: [
           '/node/node.md',          
+          '/node/fs.md',          
+          '/node/http.md',          
+          '/node/buffer.md',          
+          '/node/module.md',          
         ]
       },
       {
