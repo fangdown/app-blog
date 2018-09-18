@@ -72,18 +72,20 @@ function removeEvent(ele, type, handle){
 ```
 ### 获取shift control alt按键
 ```js
-  document.onclick = function(e){
+  var keys = []
+  document.addEventListener('keydown', function(e){
     var e = e || window.event
-    var keys = []
+    console.log('e', e)
+    keys = []
     if(e.shiftKey){
       keys.push('按了shift key')
-    } else if(e.controlKey){
+    } else if(e.ctrlKey){
       keys.push('按了control key')
     } else if(e.altKey){
       keys.push('按了alt key')
     }
     console.log(keys)
-  }
+  }, false)
 ```
 ### 获取滚轮方向
 ```js

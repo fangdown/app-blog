@@ -65,7 +65,9 @@ DNS Prefetch 应该尽量的放在网页的前面，推荐放在 ```html <meta c
 
 　　1、用meta信息来告知浏览器, 当前页面要做DNS预解析:
 ```html
- <meta http-equiv="x-dns-prefetch-control" content="on" />```
+ <meta http-equiv="x-dns-prefetch-control" content="on" />
+ <!--http中的a连接默认开启，但是https中默认关闭-->
+ ```
 
 　　2、在页面header中使用link标签来强制对DNS预解析:
 ```html

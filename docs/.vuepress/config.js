@@ -103,6 +103,7 @@ module.exports = {
       {
         title: '浏览器',
         children: [
+          '/browser/mqw-render-flow.md',
           '/browser/http2.md',
           '/browser/http-head-param.md',
           '/browser/http-head-options.md',
@@ -113,6 +114,13 @@ module.exports = {
           '/browser/event.md',
           '/browser/event-loop.md',
           '/browser/dom.md',
+        ]
+      },
+      {
+        title: '组件封装',
+        children: [
+          '/package/vue-select.md',
+          '/package/react-package.md',
         ]
       },
       {
@@ -178,6 +186,8 @@ module.exports = {
       {
         title: '性能优化',
         children: [
+          '/optimization/mqw-optimization.md',
+          '/optimization/index.md',
           '/optimization/performance.md',
           '/optimization/react-optimize-tx.md',
           '/optimization/base64.md',
