@@ -236,6 +236,7 @@ module.exports = {
           '/mqw/mqw-http.md',
           '/mqw/mqw-optimization.md',
           '/mqw/mqw-render-flow.md',
+          '/mqw/mqw-safe.md',
         ]
       },
       {
