@@ -103,7 +103,6 @@ module.exports = {
       {
         title: '浏览器',
         children: [
-          '/browser/mqw-render-flow.md',
           '/browser/http2.md',
           '/browser/http-head-param.md',
           '/browser/http-head-options.md',
@@ -186,7 +185,6 @@ module.exports = {
       {
         title: '性能优化',
         children: [
-          '/optimization/mqw-optimization.md',
           '/optimization/index.md',
           '/optimization/performance.md',
           '/optimization/react-optimize-tx.md',
@@ -230,6 +228,14 @@ module.exports = {
         title: '后端',
         children: [
           '/server/linux.md',
+        ]
+      },
+      {
+        title: 'M',
+        children: [
+          '/mqw/mqw-http.md',
+          '/mqw/mqw-optimization.md',
+          '/mqw/mqw-render-flow.md',
         ]
       },
       {
