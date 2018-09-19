@@ -171,6 +171,7 @@ module.exports = {
       {
         title: 'webpack',
         children: [
+          '/webpack/bundle.md',    
           '/webpack/webpack4-css-module.md',    
           '/webpack/package-lock.md',          
           '/webpack/package.md',          
@@ -180,6 +181,7 @@ module.exports = {
           '/webpack/webpack-plugins.md',          
           '/webpack/webpack-dev.md',               
           '/webpack/loader.md',               
+          '/webpack/gulp.md',               
         ]
       },
       {
@@ -237,6 +239,10 @@ module.exports = {
           '/mqw/mqw-optimization.md',
           '/mqw/mqw-render-flow.md',
           '/mqw/mqw-safe.md',
+          '/mqw/mqw-object.md',
+          '/mqw/mqw-mvvm.md',
+          '/mqw/mqw-errorView.md',
+          '/mqw/mqw-dataType.md',
         ]
       },
       {
