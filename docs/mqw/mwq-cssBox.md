@@ -36,3 +36,5 @@ Block Formatting Context ，块级格式化上下文
   - 自适应两栏布局
   - 清除内部浮动 
   - 防止垂直margin重叠
+
+  [BFC 神奇背后的原理-示例](http://www.cnblogs.com/lhb25/p/inside-block-formatting-ontext.html)
