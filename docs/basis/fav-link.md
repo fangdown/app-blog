@@ -8,3 +8,4 @@
 7. [H5单页面手势滑屏切换原理](https://www.cnblogs.com/onepixel/p/5300445.html)
 8. [201809面试总结](https://juejin.im/post/5b94d8965188255c5a0cdc02)
 9. [移动H5前端性能优化指南](https://blog.csdn.net/wexin_37276427/article/details/82026532)
+10. [h5启动原生APP总结](https://www.cnblogs.com/skyHF/p/7061600.html)

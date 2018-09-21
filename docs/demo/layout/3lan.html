@@ -6,17 +6,164 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>3栏布局</title>
   <style>
-    body,div{
+    html *{
       margin:0;
       padding: 0;
     }
   </style>
 </head>
 <body>
+  <!--float布局，脱离文档流，但是还占位-->
   <div class="layout float">
+    <style>
+      .float > div{
+        height: 100px;
+      }
+      .float> .left{
+        float: left;
+        width: 200px;
+        background-color: gray
+      }
+      .float > .right{
+        float: right;
+        width: 200px;
+        background-color: green;
+      }
+      .float > .center{
+        background-color: lightgray
+      }
+    </style>
     <div class="left"></div>
     <div class="right"></div>
-    <div class="center"></div>
+    <div class="center">
+      我是float布局
+      我在中间部分
+    </div>
+  </div>
+  <!--绝对定位布局-->
+  <div class="layout absolute">
+    <style>
+      .absolute{
+        position: relative;
+        height: 100px;
+      }
+      .absolute > div{
+        height: 100px;
+      }
+      .absolute > .left{
+        position: absolute;
+        left: 0;
+        width: 200px;
+        background-color: gray;
+      }
+      .absolute > .center{
+        position: absolute;
+        left: 200px;
+        right: 200px;
+        background-color: lightgray
+      }
+      .absolute > .right{
+        position: absolute;
+        right: 0;
+        width: 200px;
+        background-color: green;
+      }
+    </style>
+    <div class="left"></div>
+    <div class="center">
+       我是absolute布局
+       我在中间部分
+    </div>
+    <div class="right"></div>
+  </div>
+  <!--flex布局 center: flex=1 -->
+  <div class="layout flex">
+    <style>
+      .flex{
+        display: flex;
+      }
+      .flex > div{
+        height: 100px;
+      }
+      .flex > .left{
+        width: 200px;
+        background-color: gray;
+      }
+      .flex > .center{
+        flex: 1;
+        background-color: lightgray;
+      }
+      .flex > .right{
+        width: 200px;
+        background-color: green;
+      }
+    </style>
+    <div class="left"></div>
+    <div class="center">
+      我是flex布局
+      我在中间部分
+    </div>
+    <div class="right"></div>
+  </div>
+  <!--table布局  设置100%-->
+  <div class="layout table">
+    <style>
+      .table{
+        display: table;
+        width: 100%;
+      }
+      .table > div{
+        height: 100px;
+      }
+      .table > .left{
+        display: table-cell;
+        width: 200px;
+        background-color: gray;
+      }
+      .table > .center{
+        display: table-cell;
+        background-color: lightgray;
+      }
+      .table > .right{
+        display: table-cell;
+        width: 200px;
+        background-color: green;
+      }
+    </style>
+    <div class="left"></div>
+    <div class="center">
+      我是table布局
+      我在中间部分
+    </div>
+    <div class="right"></div>
+  </div>
+  <!--grid布局-->
+  <div class="layout grid">
+    <style> 
+      .grid{
+        width: 100%;
+        display: grid;
+        grid-template-rows: 100px;
+        grid-template-columns: 200px auto 200px;
+      }
+      .grid >.left{
+         width: 200px;
+        background-color: gray;
+      }
+      .grid >.center{
+        background-color: lightgray;
+      }
+      .grid >.right{
+        width: 200px;
+        background-color: green;
+      }
+    </style>
+    <div class="left"></div>
+    <div class="center">
+      我是grid布局
+      我在中间部分
+    </div>
+    <div class="right"></div>
   </div>
 </body>
 </html>
