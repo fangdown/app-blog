@@ -187,7 +187,7 @@ module.exports = {
       {
         title: '性能优化',
         children: [
-          '/optimization/index.md',
+          '/optimization/home.md',
           '/optimization/performance.md',
           '/optimization/react-optimize-tx.md',
           '/optimization/base64.md',
@@ -243,6 +243,9 @@ module.exports = {
           '/mqw/mqw-mvvm.md',
           '/mqw/mqw-errorView.md',
           '/mqw/mqw-dataType.md',
+          '/mqw/mqw-myself.md',
+          '/mqw/mqw-leader.md',
+          '/mqw/mqw-hr.md',
         ]
       },
       {
