@@ -1,5 +1,5 @@
-## http-M
-
+## http
+一种网络传输协议
 ### http的特点
 1. 简单快速
 2. 灵活
@@ -8,17 +8,17 @@
 
 ### http的报文组成
 1. 请求报文
-   - 请求行： url method http-version
-   - 请求头
-   - 空行
-   - 请求体
+- 请求行： url method http-version
+- 请求头
+- 空行
+- 请求体
 
 ![](https://img-blog.csdn.net/20170330192653242?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvSG9sbW9meQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
 2. 响应报文
-   - 响应行
-   - 响应头
-   - 空行
-   - 响应体
+- 响应行
+- 响应头
+- 空行
+- 响应体
 ![](https://img-blog.csdn.net/20170330192754102?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvSG9sbW9meQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
 ### http的请求方法
 1. post

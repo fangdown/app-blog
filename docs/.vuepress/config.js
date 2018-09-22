@@ -243,9 +243,12 @@ module.exports = {
           '/mqw/mqw-mvvm.md',
           '/mqw/mqw-errorView.md',
           '/mqw/mqw-dataType.md',
+          '/mqw/mqw-sf.md',
           '/mqw/mqw-myself.md',
+          '/mqw/mqw-grouper.md',
           '/mqw/mqw-leader.md',
           '/mqw/mqw-hr.md',
+          '/mqw/mqw-all.md',
         ]
       },
       {
