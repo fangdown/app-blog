@@ -249,6 +249,8 @@ module.exports = {
           '/mqw/mqw-leader.md',
           '/mqw/mqw-hr.md',
           '/mqw/mqw-all.md',
+          '/mqw/mqw-stand.md',
+          '/mqw/project.md',
         ]
       },
       {
