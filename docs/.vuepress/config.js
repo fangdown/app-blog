@@ -70,6 +70,7 @@ module.exports = {
           '/high/async-js.md',
           '/high/modules.md',
           '/high/proxy.md',
+          '/high/v8-gc  .md',
         ]
       },
       {
@@ -113,6 +114,7 @@ module.exports = {
           '/browser/event.md',
           '/browser/event-loop.md',
           '/browser/dom.md',
+          '/browser/url-render.md',
         ]
       },
       {
@@ -182,6 +184,8 @@ module.exports = {
           '/webpack/webpack-dev.md',               
           '/webpack/loader.md',               
           '/webpack/gulp.md',               
+          '/webpack/babel.md',               
+          '/webpack/plugin.md',               
         ]
       },
       {
@@ -202,6 +206,7 @@ module.exports = {
           '/optimization/js-block.md',
           '/optimization/js-common.md',
           '/optimization/reflow-repaint.md',
+          '/optimization/webpack.md',
         ]
       },
       {
