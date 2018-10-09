@@ -70,6 +70,7 @@ module.exports = {
           '/high/async-js.md',
           '/high/modules.md',
           '/high/proxy.md',
+          '/high/v8-gc  .md',
         ]
       },
       {
@@ -113,6 +114,7 @@ module.exports = {
           '/browser/event.md',
           '/browser/event-loop.md',
           '/browser/dom.md',
+          '/browser/url-render.md',
         ]
       },
       {
@@ -182,12 +184,14 @@ module.exports = {
           '/webpack/webpack-dev.md',               
           '/webpack/loader.md',               
           '/webpack/gulp.md',               
+          '/webpack/babel.md',               
+          '/webpack/plugin.md',               
         ]
       },
       {
         title: '性能优化',
         children: [
-          '/optimization/index.md',
+          '/optimization/home.md',
           '/optimization/performance.md',
           '/optimization/react-optimize-tx.md',
           '/optimization/base64.md',
@@ -202,6 +206,7 @@ module.exports = {
           '/optimization/js-block.md',
           '/optimization/js-common.md',
           '/optimization/reflow-repaint.md',
+          '/optimization/webpack.md',
         ]
       },
       {
@@ -243,6 +248,14 @@ module.exports = {
           '/mqw/mqw-mvvm.md',
           '/mqw/mqw-errorView.md',
           '/mqw/mqw-dataType.md',
+          '/mqw/mqw-sf.md',
+          '/mqw/mqw-myself.md',
+          '/mqw/mqw-grouper.md',
+          '/mqw/mqw-leader.md',
+          '/mqw/mqw-hr.md',
+          '/mqw/mqw-all.md',
+          '/mqw/mqw-stand.md',
+          '/mqw/project.md',
         ]
       },
       {
