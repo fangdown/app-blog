@@ -11,7 +11,8 @@
 10. [h5启动原生APP总结](https://www.cnblogs.com/skyHF/p/7061600.html)
 11. [7种方法实现移动端Retina屏幕1px边框效果](https://www.cnblogs.com/lhb25/p/seven-method-for-1px-retina-screen.html)
 12. [web 调起 App？ 光知道 scheme 可不够！](https://juejin.im/post/5ac44a9c6fb9a028d82bf98b)
-
+13. [原
+webpack 打包传参 process.env 公司一个项目多个版本的前端架构方案](https://blog.csdn.net/a0405221/article/details/79608711)
 
 
 ### 管理

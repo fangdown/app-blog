@@ -59,3 +59,13 @@
   - 删除标签 git tag -d version
   - 补打标签 git tag -a v0.1.0 49e0cd22f6bd9510fe65084e023d9c4316b446a6（commitId）
   - 发布标签 git push origin version
+
+8. 配置sshkey到github
+  - ssh
+  - ssh-keygen -t rsa连续按回车键三次（注意：千万不要输入密码！
+  - cd .ssh/
+  - cat id_rsa.pub
+[参考](https://blog.csdn.net/gulingfengze/article/details/69665223)
+
+9. 取消git初始化
+rm -rf .git
