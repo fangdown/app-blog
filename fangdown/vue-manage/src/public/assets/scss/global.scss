@@ -1,0 +1,390 @@
+@import './variable';
+
+@font-face {
+  font-family: 'iconfont';
+  src: url('//at.alicdn.com/t/font_617277_s5uou1mij9m.woff') format('woff');
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.ml10 {
+  margin-left: 10px;
+}
+
+.mt15 {
+  margin-top: 15px;
+}
+
+.mt16 {
+  margin-top: 16px;
+}
+
+.mt10 {
+  margin-top: 10px;
+}
+
+.mt20 {
+  margin-top: 20px;
+}
+
+.p20 {
+  padding: 20px;
+}
+
+.pr20 {
+  padding-right: 20px;
+}
+
+.pl20 {
+  padding-left: 20px;
+}
+
+.li-link {
+  a {
+    display: block;
+  }
+}
+
+.center {
+  text-align: center;
+}
+
+.right {
+  text-align: right;
+}
+
+.red {
+  color: #ff0000 !important;
+}
+
+.theme {
+  color: $theme;
+  margin-left: -4px;
+}
+
+.bg-yellow {
+  background-color: $--color-15;
+}
+
+.hidden {
+  display: none;
+}
+
+.ky-erp .iconfont {
+  font-size: 12px;
+}
+
+.icon-caretdown {
+  color: $theme;
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.clearfix {
+  overflow: auto;
+  height: 1%;
+}
+
+.btn-text {
+  padding: 0 !important;
+}
+
+.noselect {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+}
+
+.p-dialog-footer {
+  display: block;
+  text-align: right;
+}
+
+.main-panel {
+  padding: 0 16px;
+  margin-top: 28px;
+  margin-bottom: 8px;
+  background-color: #ffffff;
+  font-size: 12px;
+  color: $--color-21;
+}
+
+.kye-query-form {
+  margin-bottom: 0;
+  border-bottom: 1px solid $--color-24;
+  .el-input-group__append,
+  .el-input-group__prepend {
+    padding: 0 8px !important;
+  }
+  .el-form-item--mini.el-form-item {
+    margin-bottom: 4px !important;
+  }
+  .el-radio__label {
+    padding-left: 0;
+  }
+  .el-date-editor .el-input__icon.el-range__icon {
+    display: none;
+  }
+  .el-date-editor .el-input__prefix {
+    display: none;
+  }
+  .el-date-editor--date .el-range-input {
+    width: 98px;
+  }
+  .el-date-editor--datetime .el-range-input {
+    width: 128px !important;
+  }
+  .el-date-editor--time .el-range-input {
+    width: 78px;
+  }
+  .el-date-editor--timerange .el-range-input {
+    width: 48px;
+  }
+  .el-input--suffix .el-input__inner {
+    padding-right: 8px !important;
+  }
+  .el-select .el-input--suffix .el-input__inner {
+    padding-right: 20px !important;
+  }
+  .item-area {
+    .el-form-item__content {
+      height: auto;
+    }
+  }
+  .icon-arrow {
+    cursor: pointer;
+    padding-left: 8px;
+    color: #9571E9;
+    font-weight: 400;
+  }
+}
+
+.kye-tool-list {
+  height: 28px;
+  max-height: 28px;
+  > :first-child {
+    margin-left: 0 !important;
+  }
+  > * {
+    margin-left: 4px;
+  }
+  /deep/ {
+    .el-checkbox {
+      line-height: 28px;
+      padding: 0 12px;
+    }
+  }
+  .is-active {
+    color: $primary-hover;
+    border-color: $--color-26;
+    background-color: $--color-26;
+  }
+}
+
+.kye-search-input {
+  .el-form-item__content {
+    height: 29px;
+  }
+}
+
+.kye-dialog-dynamic {
+  .el-dialog__body {
+    padding: 0 !important;
+    max-height: none !important;
+    overflow-y: hidden !important;
+  }
+  .kye-dialog-body {
+    padding: 12px 16px;
+    max-height: 60vh;
+    overflow-y: auto;
+  }
+  .kye-dialog-body_form {
+    padding: 12px 16px 0 16px;
+    max-height: 60vh;
+    overflow-y: auto;
+  }
+  // 弹框里 el-tabs 多个 query-table
+  .kye-dialog-tabs {
+    .el-tabs__header {
+      margin-bottom: 0;
+      padding: 6px 16px 0;
+    }
+  }
+}
+
+// 可点击label
+.kye-label-click {
+  color: $theme;
+  cursor: pointer;
+}
+
+//新增、编辑、详情 分块标题栏
+.kye-block-title {
+  margin-bottom: 12px;
+  padding-left: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  height: 28px;
+  line-height: 28px;
+  background: $--color-26;
+}
+
+// 表单提交按钮
+.kye-form-submit {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.kye-form-submit_btn {
+  text-align: center;
+  margin-top: 0;
+}
+
+.kye-form-submit_form {
+  text-align: center;
+  margin-top: 24px;
+}
+
+// tag 间距
+.kye-form-item__tag {
+  margin: 4px;
+}
+
+// 表单item多元素组成的div块
+.kye-form-item__block {
+  border: 1px solid $border-color;
+  border-radius: 4px;
+  padding: 4px;
+}
+
+.kye-field-text {
+  font-size: 12px;
+  overflow: hidden;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.kye-data-rows {
+  display: flex;
+  align-items: center;
+  min-height: 28px;
+  flex-wrap: wrap;
+  background-color: $--color-28;
+  padding: 0 12px;
+  li {
+    min-width: 60px;
+    margin-right: 24px;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    padding: 4px;
+  }
+  label {
+    color: $--color-22;
+    font-size: 12px;
+    margin-right: 2px;
+  }
+  strong {
+    color: $--color-11;
+    padding: 0 2px 0 4px;
+  }
+  em {
+    font-style: normal;
+    color: $--color-22;
+    font-size: 12px;
+  }
+}
+
+.header-tool-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  li {
+    display: block;
+    min-width: 80px;
+    margin: 6px;
+    padding: 10px 0;
+    text-align: center;
+    cursor: pointer;
+    border: 1px #E6E6E6 solid;
+    border-radius: 4px;
+    color: #000000;
+    &:hover {
+      border: 1px #7352BF solid;
+      color: #7352BF;
+    }
+    i {
+      font-size: 16px !important;
+    }
+    p {
+      margin-top: 8px;
+    }
+  }
+}
+
+.header-tool-popover {
+  padding: 6px;
+}
+
+// 统一处理非queryform的自定义查询form样式
+.kye-form-wrap {
+  .el-form-item--mini {
+    display: inline-block;
+    margin-right: 4px;
+    margin-bottom: 0;
+    .el-form-item__label {
+      display: inline-block;
+      width: auto !important;
+      line-height: 28px;
+    }
+    .el-form-item__content {
+      margin-left: 0 !important;
+      display: inline-block;
+    }
+    .el-dropdown-link {
+      .theme {
+        margin-left: 0;
+      }
+      .icon-caretdown {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+.kye-expand-page {
+  max-width: 1280px;
+}
+
+.kye-field-content {
+  font-size: 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  display: inline-block;
+  width: 100%;
+  height: 29px;
+  color: #333;
+  font-weight: 400;
+  border: #dcdae2 1px solid;
+  border-radius: 4px;
+  padding: 0 8px;
+  &__label {
+    display: inline-block;
+  }
+}

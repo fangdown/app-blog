@@ -69,3 +69,10 @@
 
 9. 取消git初始化
 rm -rf .git
+
+10. git子模块
+
+- git clone http://172.20.8.45/erp-frontend/base.git --recursive （recursive如果有子目录 会带下来）
+- cd base
+- git submodule add -b dev http://172.20.8.45/erp-frontend/ecms.git src/ecms （关键步骤，添加子模块）
+- git submodule foreach git pull origin dev （更新子模块）
