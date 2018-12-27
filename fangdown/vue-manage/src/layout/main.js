@@ -2,12 +2,12 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import ElementUi from 'element-ui'
-import KyeUi from '../public/components'
+import FdUi from '../public/components'
 import App from './layout/index.vue'
 import router from './router'
 
 Vue.use(ElementUi, { size: 'mini' })
-Vue.use(KyeUi)
+Vue.use(FdUi)
 
 Vue.config.productionTip = false
 
