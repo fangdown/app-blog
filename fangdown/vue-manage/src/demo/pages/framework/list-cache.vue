@@ -1,44 +1,64 @@
 <template>
-  <div>列表缓存
-    <fd-button>自定义按钮</fd-button>
-    <fd-custom name="fang">自定义组件</fd-custom>
-    <el-button type="text"
-               @click="open">点击打开 Dialog</el-button>
-    <test-dialog :content="content"
-                 ref="test"
-                 v-if="dialogVisible"
-                 @close="close"></test-dialog>
+  <div>
+    <!-- <fd-button>自定义按钮</fd-button>
+    <fd-custom name="fang">自定义组件</fd-custom> -->
+    <el-table :data="tableData"
+              border
+              height="600"
+              style="width: 100%;">
+      <el-table-column prop="source"
+                       label="来源"
+                       width="120">
+      </el-table-column>
+      <el-table-column label="标题">
+        <template slot-scope="scope">
+          <a :href="scope.row.url"
+             target="_blank">{{scope.row.title}}</a>
+        </template>
+      </el-table-column>
+    </el-table>
+    <el-pagination @size-change="handleSizeChange"
+                   @current-change="handleCurrentChange"
+                   :current-page="currentPage"
+                   :page-sizes="[20]"
+                   :page-size="20"
+                   layout="total, sizes, prev, pager, next, jumper"
+                   :total="400">
+    </el-pagination>
   </div>
 </template>
 <script>
-  import testDialog from './dialog.vue'
   export default {
-    components: {
-      testDialog
-    },
     data () {
       return {
         content: '',
-        dialogVisible: false
+        tableData: [],
+        currentPage: 1,
+        total: 0
       }
     },
+    mounted () {
+      this.getData()
+    },
     methods: {
-      open () {
-        this.dialogVisible = true
-        this.content = 'hello'
-        setTimeout(() => {
-          this.$refs.test.open()
-        }, 0)
+      async getData () {
+        const params = {
+          key: 'b84435e0b50508349f504721d5006e6d',
+          pno: this.currentPage,
+          ps: 20,
+          ERPSearchCacheFlag: true
+        }
+        const data = await this.$http('/api/weixin/query', params)
+        this.tableData = data.list
+        this.currentPage = data.pno
+        this.total = this.totalPage
       },
-      close () {
-        this.dialogVisible = false
+      handleSizeChange (val) {
+        console.log(`每页 ${val} 条`)
       },
-      handleClose (done) {
-        this.$confirm('确认关闭？')
-          .then(_ => {
-            done()
-          })
-          .catch(_ => { })
+      handleCurrentChange (val) {
+        this.currentPage = val
+        this.getData()
       }
     }
   }

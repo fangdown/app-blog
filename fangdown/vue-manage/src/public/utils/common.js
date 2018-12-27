@@ -1,5 +1,9 @@
 import store from '../store'
 
+export const getToken = () => {
+  return 'bdc9dad5-5c67-4b60-bbfa-1cf8a087e8e4'
+  // return localStorage.getItem('token') || ''
+}
 export const getRoutes = (context, ignore) => {
   const children = []
   context.keys().forEach(key => {
@@ -39,4 +43,12 @@ export const createModuleLayout = (name) => {
       }
     }
   }
+}
+
+export const random = (count) => {
+  let num = Date.now() + Math.floor(1000 * Math.random() + 1000)
+  if (count) {
+    return num.toString().substr(-count)
+  }
+  return num.toString()
 }
