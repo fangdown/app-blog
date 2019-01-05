@@ -76,3 +76,6 @@ rm -rf .git
 - cd base
 - git submodule add -b dev http://172.20.8.45/erp-frontend/ecms.git src/ecms （关键步骤，添加子模块）
 - git submodule foreach git pull origin dev （更新子模块）
+
+11. mac显示分支
+[参考](https://www.jianshu.com/p/9f64abc94d45)
