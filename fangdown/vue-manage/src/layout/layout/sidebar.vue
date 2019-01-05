@@ -11,7 +11,8 @@
       </template>
       <el-submenu index="1-1">
         <template slot="title">基础架构</template>
-        <el-menu-item index="1-1-1">组件设计</el-menu-item>
+        <el-menu-item index="1-1-1"
+                      @click="pushRoute('/demo/base/component')">组件设计</el-menu-item>
         <el-menu-item index="1-1-2">指令设计</el-menu-item>
       </el-submenu>
       <el-submenu index="1-2">
@@ -23,8 +24,18 @@
         <el-menu-item index="1-2-3">通用表单</el-menu-item>
         <el-menu-item index="1-2-4">监控字段</el-menu-item>
         <el-menu-item index="1-2-5">上下页</el-menu-item>
-        <el-menu-item index="1-2-6">日志采集</el-menu-item>
+        <el-menu-item index="1-2-6"
+                      @click="pushRoute('/demo/framework/error-handle')">错误采集</el-menu-item>
         <el-menu-item index="1-2-7">请求封装</el-menu-item>
+        <el-menu-item index="1-2-8"
+                      @click="pushRoute('/demo/framework/register-module')">动态注册vuex模块</el-menu-item>
+        <el-menu-item index="1-2-9"
+                      @click="pushRoute('/demo/framework/tag')">同一模块tag的使用</el-menu-item>
+      </el-submenu>
+      <el-submenu index="1-3">
+        <template slot="title">其他</template>
+        <el-menu-item index="1-3-1"
+                      @click="pushRoute('/demo/system/log')">日志查看</el-menu-item>
       </el-submenu>
     </el-submenu>
   </el-menu>

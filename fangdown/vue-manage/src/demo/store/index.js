@@ -1,12 +1,14 @@
 export default {
   namespaced: true,
   state: {
-    sys_guid: ''
+    name: ''
   },
-  getters: {},
+  getters: {
+    name: state => state.name
+  },
   mutations: {
-    SET_SYS_GUID (state, payload) {
-      state.sys_guid = payload.id
+    SET_NAME (state, data) {
+      state.name = data
     }
   },
   actions: {},

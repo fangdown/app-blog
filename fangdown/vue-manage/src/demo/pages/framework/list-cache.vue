@@ -1,7 +1,5 @@
 <template>
   <div>
-    <!-- <fd-button>自定义按钮</fd-button>
-    <fd-custom name="fang">自定义组件</fd-custom> -->
     <el-table :data="tableData"
               border
               height="600"

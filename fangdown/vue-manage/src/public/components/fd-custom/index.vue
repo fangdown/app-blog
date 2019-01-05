@@ -1,5 +1,7 @@
 <template>
-  <div>姓名：{{name}}</div>
+  <div>姓名：{{name}}
+    <slot />
+  </div>
 </template>
 <script>
   export default {

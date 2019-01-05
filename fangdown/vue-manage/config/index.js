@@ -17,6 +17,10 @@ module.exports = {
         pathRewrite: {
           '^/api': '' // rewrite path
         }
+      },
+      '/router': {
+        target: 'http://open-sit.kyeapi.com',
+        changeOrigin: true,
       }
     },
 
