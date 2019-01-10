@@ -4,6 +4,7 @@ const canvasTable = () => import(/* webpackChunkName: "demo" */ '../../pages/fra
 const registerModule = () => import(/* webpackChunkName: "demo" */ '../../pages/framework/register-module')
 const routerTag = () => import(/* webpackChunkName: "demo" */ '../../pages/framework/router-tag')
 const errorHandle = () => import(/* webpackChunkName: "demo" */ '../../pages/framework/error-handle')
+const http = () => import(/* webpackChunkName: "demo" */ '../../pages/framework/http')
 
 export default [
   {
@@ -44,6 +45,14 @@ export default [
     meta: {
       tag,
       title: '错误采集'
+    }
+  },
+  {
+    path: 'framework/http',
+    component: http,
+    meta: {
+      tag,
+      title: '请求封装'
     }
   }
 ]

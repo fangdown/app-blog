@@ -1,6 +1,5 @@
 import axios from 'axios'
 import { Message } from 'element-ui'
-import { random, getToken } from './common'
 import ERPcache from './cache-plugin'
 
 import queryString from 'query-string'
@@ -21,12 +20,6 @@ const ERRORS = {
   api: '接口错误'
 }
 
-// 用户ID-时间戳-4位随机数-前端menuID
-const getWebTraceId = () => {
-  let userId = 'userId'
-  let menuId = 'menuId'
-  return `${userId}-${Date.now()}-${random(4)}-${menuId}`
-}
 
 const httpPending = {}
 const removeHttpPending = (config, isRemove = true) => {
@@ -53,23 +46,11 @@ const service = axios.create({
 })
 
 service.interceptors.request.use(config => {
-  // try {
-  //   ERPlog.handerConfig(config)
-  // } catch (e) {
-  //   console.log(e)
-  // }
   config.data = config.data || {}
-
   // 防止重复提交
   if (removeHttpPending(config, false)) {
     config.cancelToken = CancelToken
   }
-  // 日志记录请求头
-  config.headers.webTraceId = getWebTraceId()
-  // 数据权限范围控制
-  config.headers['X-menu-id'] = ''
-
-  config.headers.token = getToken()
   return config
 })
 

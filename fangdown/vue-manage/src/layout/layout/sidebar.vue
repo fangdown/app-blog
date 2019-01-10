@@ -26,7 +26,8 @@
         <el-menu-item index="1-2-5">上下页</el-menu-item>
         <el-menu-item index="1-2-6"
                       @click="pushRoute('/demo/framework/error-handle')">错误采集</el-menu-item>
-        <el-menu-item index="1-2-7">请求封装</el-menu-item>
+        <el-menu-item index="1-2-7"
+                      @click="pushRoute('/demo/framework/http')">请求封装</el-menu-item>
         <el-menu-item index="1-2-8"
                       @click="pushRoute('/demo/framework/register-module')">动态注册vuex模块</el-menu-item>
         <el-menu-item index="1-2-9"
