@@ -19,3 +19,7 @@
 
 ### 知识整理
 1. [面试](https://mountain-buzhou.github.io/Interview-Book/guide/)
+2. [【面经】寒冬中的一年半前端跳槽](https://juejin.im/post/5c356f68f265da61483bca61)
+3. [2018前端面试押题（讲义）](https://zhuanlan.zhihu.com/p/34536462)
+4. [前端工程师手册](https://leohxj.gitbooks.io/front-end-database/content/javascript-basic/index.html)
+5. [合格前端系列第九弹-前端面试那些事](https://zhuanlan.zhihu.com/p/32911022)
