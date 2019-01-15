@@ -21,7 +21,8 @@
                       @click="pushRoute('/demo/framework/list-cache')">列表缓存</el-menu-item>
         <el-menu-item index="1-2-2"
                       @click="pushRoute('/demo/framework/canvas-table')">canvas表格</el-menu-item>
-        <el-menu-item index="1-2-3">通用表单</el-menu-item>
+        <el-menu-item index="1-2-3"
+                      @click="pushRoute('/demo/framework/query-form')">通用表单</el-menu-item>
         <el-menu-item index="1-2-4">监控字段</el-menu-item>
         <el-menu-item index="1-2-5">上下页</el-menu-item>
         <el-menu-item index="1-2-6"
@@ -34,10 +35,15 @@
                       @click="pushRoute('/demo/framework/tag')">同一模块tag的使用</el-menu-item>
       </el-submenu>
       <el-submenu index="1-3">
-        <template slot="title">其他</template>
+        <template slot="title">elemnetUI</template>
         <el-menu-item index="1-3-1"
-                      @click="pushRoute('/demo/system/log')">日志查看</el-menu-item>
+                      @click="pushRoute('/demo/elementUI/dynamic-form')">动态表单</el-menu-item>
       </el-submenu>
+    </el-submenu>
+    <el-submenu index="1-10">
+      <template slot="title">其他</template>
+      <el-menu-item index="1-3-1"
+                    @click="pushRoute('/demo/system/log')">日志查看</el-menu-item>
     </el-submenu>
   </el-menu>
 </template>

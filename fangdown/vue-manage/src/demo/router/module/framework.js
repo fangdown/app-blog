@@ -5,6 +5,7 @@ const registerModule = () => import(/* webpackChunkName: "demo" */ '../../pages/
 const routerTag = () => import(/* webpackChunkName: "demo" */ '../../pages/framework/router-tag')
 const errorHandle = () => import(/* webpackChunkName: "demo" */ '../../pages/framework/error-handle')
 const http = () => import(/* webpackChunkName: "demo" */ '../../pages/framework/http')
+const queryForm = () => import(/* webpackChunkName: "demo" */ '../../pages/framework/query-form/query-form')
 
 export default [
   {
@@ -53,6 +54,14 @@ export default [
     meta: {
       tag,
       title: '请求封装'
+    }
+  },
+  {
+    path: 'framework/query-form',
+    component: queryForm,
+    meta: {
+      tag,
+      title: '通用表单'
     }
   }
 ]

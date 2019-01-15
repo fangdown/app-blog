@@ -4,10 +4,18 @@ import '../assets/scss/app.scss'
 import { http } from '../utils/http.js'
 import FdButton from './fd-button/index'
 import FdCustom from './fd-custom/index.vue'
+import FdSelect from './fd-select/index'
+import FdOption from './fd-option/index'
+import FdDatePicker from './fd-date-picker/index'
+import QueryForm from './query-form/index.vue'
 
 const components = [
   FdButton,
-  FdCustom
+  FdCustom,
+  FdSelect,
+  FdOption,
+  FdDatePicker,
+  QueryForm
 ]
 const setPrototype = (Vue) => {
   Vue.prototype.$bus = new Vue()
