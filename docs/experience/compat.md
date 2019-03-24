@@ -139,3 +139,12 @@ evt.addEventListener ? dom.addEventListener('click', fn)  : dom.attactEvent('onc
 
   ```
   
+### document.body document.documentElement
+区别： 
+- 页面具有 DTD，或者说指定了 DOCTYPE 时，使用 document.documentElement。
+- 页面不具有 DTD，或者说没有指定了 DOCTYPE，时，使用 document.body。
+
+移动端：
+定义了DTD， 仍让是document.body生效，奇怪
+
+

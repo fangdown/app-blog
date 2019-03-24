@@ -51,3 +51,31 @@
   6. git commit -m 和 -am的区别
   简要区别： 已经提交过的文件，修改了，可以使用am一起，如果文件没有add过，则不能用am
   [区别](https://www.cnblogs.com/xiaohuochai/p/6664451.html)
+
+  7. git 打标签
+  - 创建 git tag version (-light) 
+  - 创建附注标签 git tag -a v0.1.0 -m "release 0.1.0 version"
+  - 查看标签 git tag , git show version 
+  - 删除标签 git tag -d version
+  - 补打标签 git tag -a v0.1.0 49e0cd22f6bd9510fe65084e023d9c4316b446a6（commitId）
+  - 发布标签 git push origin version
+
+8. 配置sshkey到github
+  - ssh
+  - ssh-keygen -t rsa连续按回车键三次（注意：千万不要输入密码！
+  - cd .ssh/
+  - cat id_rsa.pub
+[参考](https://blog.csdn.net/gulingfengze/article/details/69665223)
+
+9. 取消git初始化
+rm -rf .git
+
+10. git子模块
+
+- git clone http://172.20.8.45/erp-frontend/base.git --recursive （recursive如果有子目录 会带下来）
+- cd base
+- git submodule add -b dev http://172.20.8.45/erp-frontend/ecms.git src/ecms （关键步骤，添加子模块）
+- git submodule foreach git pull origin dev （更新子模块）
+
+11. mac显示分支
+[参考](https://www.jianshu.com/p/9f64abc94d45)
