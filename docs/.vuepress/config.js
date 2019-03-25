@@ -12,8 +12,8 @@ module.exports = {
 
   // 在 <head> 标签中自定义额外标签
   head: [
-    ['meta', { httpEquiv:'pragma', content: 'no-cache' }],
-    ['meta', { httpEquiv:'Cache-Control', content: 'no-cache' }],
+    ['meta', { httpEquiv: 'pragma', content: 'no-cache' }],
+    ['meta', { httpEquiv: 'Cache-Control', content: 'no-cache' }],
     ['meta', { name: 'keywords', content: '前端基础,前端进阶,思维导图,javascript,react,vue' }],
     ['link', { rel: 'icon', href: `/favicon.ico` }]
   ],
@@ -127,65 +127,67 @@ module.exports = {
       {
         title: '项目经验',
         children: [
-          '/experience/compat.md',              
-          '/experience/url-length.md',              
-          '/experience/normal-1.md',          
-          '/experience/fetch-timeout.md',          
-          '/experience/wxgzh.md',          
-          '/experience/babel-polyfill.md',          
-          '/experience/online-debugger.md',          
-         ]
+          '/experience/compat.md',
+          '/experience/url-length.md',
+          '/experience/normal-1.md',
+          '/experience/fetch-timeout.md',
+          '/experience/wxgzh.md',
+          '/experience/babel-polyfill.md',
+          '/experience/online-debugger.md',
+          '/experience/response-attachment.md',
+        ]
       },
       {
         title: 'react',
         children: [
           '/react/react-bind.md',
-          '/react/react-life.md',          
-          '/react/react-high-component.md',          
-          '/react/react-diff.md',          
-          '/react/react-mind.md',          
-          '/react/react-redux.md',          
-          '/react/react-fiber.md',    
+          '/react/react-life.md',
+          '/react/react-high-component.md',
+          '/react/react-diff.md',
+          '/react/react-mind.md',
+          '/react/react-redux.md',
+          '/react/react-fiber.md',
         ]
       },
       {
         title: 'vue',
         children: [
           '/vue/vue-eslint.md',
-          '/vue/vue-framework.md',          
-          '/vue/vue.md',          
-          '/vue/vue-life.md',          
-          '/vue/vue-nextTick.md',          
-          '/vue/vue-point1.md',          
-          '/vue/vue-transition.md',         
+          '/vue/vue-framework.md',
+          '/vue/vue.md',
+          '/vue/vue-life.md',
+          '/vue/vue-nextTick.md',
+          '/vue/vue-point1.md',
+          '/vue/vue-transition.md',
+          '/vue/keep-alive.md',
         ]
       },
       {
         title: 'nodejs',
         children: [
-          '/node/node.md',          
-          '/node/fs.md',          
-          '/node/http.md',          
-          '/node/buffer.md',          
-          '/node/module.md',          
+          '/node/node.md',
+          '/node/fs.md',
+          '/node/http.md',
+          '/node/buffer.md',
+          '/node/module.md',
         ]
       },
       {
         title: 'webpack',
         children: [
-          '/webpack/bundle.md',    
-          '/webpack/webpack4-css-module.md',    
-          '/webpack/package-lock.md',          
-          '/webpack/package.md',          
-          '/webpack/eslint-rule.md',     
-          '/webpack/webpack.md',          
-          '/webpack/webpack-mind.md',          
-          '/webpack/webpack-plugins.md',          
-          '/webpack/webpack-dev.md',               
-          '/webpack/loader.md',               
-          '/webpack/gulp.md',               
-          '/webpack/babel.md',               
-          '/webpack/plugin.md',               
+          '/webpack/bundle.md',
+          '/webpack/webpack4-css-module.md',
+          '/webpack/package-lock.md',
+          '/webpack/package.md',
+          '/webpack/eslint-rule.md',
+          '/webpack/webpack.md',
+          '/webpack/webpack-mind.md',
+          '/webpack/webpack-plugins.md',
+          '/webpack/webpack-dev.md',
+          '/webpack/loader.md',
+          '/webpack/gulp.md',
+          '/webpack/babel.md',
+          '/webpack/plugin.md',
         ]
       },
       {
@@ -207,6 +209,8 @@ module.exports = {
           '/optimization/js-common.md',
           '/optimization/reflow-repaint.md',
           '/optimization/webpack.md',
+          '/xiaoce/youhua-webpack.md',
+          '/xiaoce/youhua-image.md',
         ]
       },
       {
@@ -220,15 +224,15 @@ module.exports = {
       {
         title: '算法',
         children: [
-          '/arithmetic/binarySearch.md',          
-          '/arithmetic/quickSort.md',          
-          '/arithmetic/binaryTreeMinDept.md',          
+          '/arithmetic/binarySearch.md',
+          '/arithmetic/quickSort.md',
+          '/arithmetic/binaryTreeMinDept.md',
         ]
       },
       {
         title: '协作',
         children: [
-          '/team/git.md',          
+          '/team/git.md',
         ]
       },
       {
