@@ -210,7 +210,13 @@ module.exports = {
           '/optimization/reflow-repaint.md',
           '/optimization/webpack.md',
           '/xiaoce/youhua-webpack.md',
+          '/xiaoce/youhua-brower.md',
           '/xiaoce/youhua-image.md',
+          '/xiaoce/youhua-cache.md',
+          '/xiaoce/youhua-dom.md',
+          '/xiaoce/youhua-repaint-flow.md',
+          '/xiaoce/youhua-ssr.md',
+          '/xiaoce/youhua-cdn.md',
         ]
       },
       {
