@@ -14,6 +14,17 @@
 		{{text}}
 	</div>
 	<script>
+		/** 温习日志
+		20190324:
+		步骤：
+		1，遍历data属性，给每个属性更改get/seter方法，
+		2， getter方法，添加执行subs的addSub方法, setter方法，执行subs.notify方法
+		3， 编译dom，遇到文本时，生成观察者， 执行update方法，读取data值并赋值给nodeValue，
+		遇input时增加监听事件
+		4，创建文档碎片，逐级编译，生成新的dom结构
+		5，实例化vue
+		6， 如果input监听事件执行，执行vm赋值操作，引发setter方法，进而执行noitfy方法，进而执行每一个观察者的upate方法
+		*/
 		//##################step6-订阅-观察者模式#######################
 		/**
 		构造函数

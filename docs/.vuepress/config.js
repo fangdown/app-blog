@@ -70,7 +70,7 @@ module.exports = {
           '/high/async-js.md',
           '/high/modules.md',
           '/high/proxy.md',
-          '/high/v8-gc  .md',
+          '/high/v8-gc.md',
         ]
       },
       {

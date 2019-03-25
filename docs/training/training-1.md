@@ -414,3 +414,8 @@ var d = {
 }
 deepEq(c, d)
 ```
+
+25. this.props.children和React.children区别
+26. 堆和栈的区别
+27. react和Vue的区别
+28. 
