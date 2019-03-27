@@ -70,13 +70,21 @@ module.exports = {
           '/high/async-js.md',
           '/high/modules.md',
           '/high/proxy.md',
-          '/high/v8-gc  .md',
+          '/high/v8-gc.md',
+        ]
+      },
+      {
+        title: '手写代码',
+        children: [
+          '/code/call-apply-bind.md',
+          '/code/deepClone.md',
+          '/code/defineProperty.md',
+          '/code/proxy.md',
         ]
       },
       {
         title: '原理',
         children: [
-          '/principle/call-apply-bind.md',
           '/principle/new.md',
           '/principle/typeof-instanceof.md',
           '/principle/lazyload.md',
@@ -170,6 +178,7 @@ module.exports = {
           '/node/http.md',
           '/node/buffer.md',
           '/node/module.md',
+          '/node/koa-mongodb.md',
         ]
       },
       {
