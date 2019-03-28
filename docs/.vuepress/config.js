@@ -254,6 +254,7 @@ module.exports = {
         title: '后端',
         children: [
           '/server/linux.md',
+          '/server/mongodb/mingling.md',
         ]
       },
       {
