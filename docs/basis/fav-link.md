@@ -23,3 +23,4 @@
 3. [2018前端面试押题（讲义）](https://zhuanlan.zhihu.com/p/34536462)
 4. [前端工程师手册](https://leohxj.gitbooks.io/front-end-database/content/javascript-basic/index.html)
 5. [合格前端系列第九弹-前端面试那些事](https://zhuanlan.zhihu.com/p/32911022)
+6. [小程序-vue面试题](https://github.com/ltadpoles/web-document/tree/master/Other)
