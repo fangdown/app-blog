@@ -113,3 +113,5 @@ pm2 start app.js
 或
 npm run pm2
 ```
+
+[参考](https://my.oschina.net/u/3018050/blog/1936780)
