@@ -255,6 +255,8 @@ module.exports = {
         children: [
           '/server/linux.md',
           '/server/mongodb/mingling.md',
+          '/server/mongodb/build.md',
+          '/server/mongodb/pm2.md',
         ]
       },
       {
