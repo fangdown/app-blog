@@ -257,6 +257,8 @@ module.exports = {
           '/server/mongodb/mingling.md',
           '/server/mongodb/build.md',
           '/server/mongodb/pm2.md',
+          '/server/mongodb/deploy.md',
+          '/server/mongodb/job.md',
         ]
       },
       {
