@@ -1,5 +1,109 @@
 ## js优化总结
-### 避免全局变量
+
+### 对多个条件使用 Array.includes
+```js
+// bad
+function test(fruit) {
+  if (fruit == 'apple' || fruit == 'strawberry') {
+    console.log('red');
+  }
+}
+// good
+function test(fruit) {
+  const redFruits = ['apple', 'strawberry', 'cherry', 'cranberries'];
+  if (redFruits.includes(fruit)) {
+    console.log('red');
+  }
+}
+
+```
+### 更少的嵌套，尽早返回
+```js
+function test(fruit, quantity) {
+  const redFruits = ['apple', 'strawberry', 'cherry', 'cranberries'];
+ 
+  // condition 1: throw error early
+  if (!fruit) throw new Error('No fruit!');
+ 
+  // condition 2: must be red
+  if (redFruits.includes(fruit)) {
+    console.log('red');
+ 
+    // condition 3: must be big quantity
+    if (quantity &gt; 10) {
+      console.log('big quantity');
+    }
+  }
+}
+// =========> good
+function test(fruit, quantity) {
+  const redFruits = ['apple', 'strawberry', 'cherry', 'cranberries'];
+ 
+  if (!fruit) throw new Error('No fruit!'); // condition 1: throw error early
+  if (!redFruits.includes(fruit)) return; // condition 2: stop when fruit is not red
+ 
+  console.log('red');
+ 
+  // condition 3: must be big quantity
+  if (quantity &gt; 10) {
+    console.log('big quantity');
+  }
+}
+```
+### 使用默认的函数参数和解构
+```js
+function test(fruit, quantity) {
+  if (!fruit) return;
+  const q = quantity || 1;
+  console.log(`We have ${q} ${fruit}!`);
+}
+test('banana'); // We have 1 banana!
+test('apple', 2); // We have 2 apple!
+// =========> good
+function test(fruit, quantity = 1) {
+  if (!fruit) return;
+  console.log(`We have ${quantity} ${fruit}!`);
+}
+test('banana'); // We have 1 banana!
+test('apple', 2); // We have 2 apple!
+```
+### 选择 Map 或对象字面量，而不是 Switch 语句
+```js
+function test(color) {
+  switch (color) {
+    case 'red':
+      return ['apple', 'strawberry'];
+    case 'yellow':
+      return ['banana', 'pineapple'];
+    case 'purple':
+      return ['grape', 'plum'];
+    default:
+      return [];
+  }
+}
+test(null); // []
+test('yellow'); // ['banana', 'pineapple']
+// =========> good
+const fruitColor = {
+  red: ['apple', 'strawberry'],
+  yellow: ['banana', 'pineapple'],
+  purple: ['grape', 'plum']
+};
+ 
+function test(color) {
+  return fruitColor[color] || [];
+}
+// or
+const fruitColor = new Map()
+.set('red', ['apple', 'strawberry'])
+.set('yellow', ['banana', 'pineapple'])
+.set('purple', ['grape', 'plum']);
+ 
+function test(color) {
+  return fruitColor.get(color) || [];
+}
+```
+###避免全局变量
 在一个函数中会用到全局对象存储为局部变量来减少全局查找，因为访问局部变量的速度要比访问全局变量的速度更快些。
 ```js
 function search() {

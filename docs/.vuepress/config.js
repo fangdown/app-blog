@@ -80,6 +80,11 @@ module.exports = {
           '/code/deepClone.md',
           '/code/defineProperty.md',
           '/code/proxy.md',
+          '/code/currying.md',
+          '/code/extend.md',
+          '/code/instanceof.md',
+          '/code/promise.md',
+          '/code/new.md',
         ]
       },
       {
@@ -259,6 +264,7 @@ module.exports = {
           '/server/mongodb/pm2.md',
           '/server/mongodb/deploy.md',
           '/server/mongodb/job.md',
+          '/server/nginx/proxy-pass.md',
         ]
       },
       {

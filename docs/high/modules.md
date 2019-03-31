@@ -11,19 +11,23 @@
 使用define定义模块，使用require调用模块
 现在的规范有AMD/CMD/CommonJs
 
+### es6模块和node模块区别
+> require: node 和 es6 都支持的引入  
+> export / import : 只有es6 支持的导出引入   
+> module.exports / exports: 只有 node 支持的导出  
+1. import 导入需前置，放在代码顶部，且是提前加载
+2. require 导入可以在需要的时候导入
+3. es6模块最终经过babel转化成commonjs规范
 ### CommonJs规范
-
 一个单独的文件就是一个模块，每一个模块都是一个单独的作用域，也就是说模块内部定义的变量，无法被其他模块读取，除非定义为global对象的属性。
 输出模块变量的最好方法是使用module.exports对象。默认是空对象{}
 ```js
-// 例1
 // plus.js
 function plus(a, b){
   return a + b
 }
 module.exports = plus // 直接返回一个函数
 module.exports.plus = plus // 返回一个对象
-
 // 调用
 var plus = require(./plus)
 plus(1, 2)
@@ -34,7 +38,6 @@ plus.plus(1, 2)
 > exports 和module.exports的区别
 > exports是module.exports的引用，算是简写吧
 > 如果该写了exports=xxx，则和module.exports 没有关系了，不建议这样写
-
 ```js
 // plus.js
 function plus(a, b){
@@ -43,24 +46,16 @@ function plus(a, b){
 exports.plus = plus
 // 等同于
 module.exports.plus = plus
-
-// eq
 // index.js
 var something = require('./requireMe')
 something()
-// requireMe.js
 exports.someting = function(){
   console.log('i am function')
 }
-// TypeError: something is not a function
-// 修正index.js
-// something.something()
-// 或修正requireMe
 module.exports = function(){
   console.log('i am function')
 }
 ```
-
 ### AMD规范
 > require.js使用的场景
 >（1）实现js文件的异步加载，避免网页失去响应；
@@ -101,11 +96,8 @@ define(function(){
 ### CMD规范
 ```js
 define(factory);
-
 define(function(require, exports, module) {
-
   // 模块代码
-
 });
 ```
 - 实例
@@ -122,6 +114,5 @@ define(function(require, exports, module){
   var sum = require('./math.js').add(5, 1)
 })
 ```
-
 - AMD:API根据使用范围有区别，但使用同一个api接口
 - CMD:每个API的职责单一
