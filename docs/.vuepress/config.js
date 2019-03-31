@@ -25,9 +25,7 @@ module.exports = {
 
   themeConfig: {
     // repo: '',
-
     docsDir: 'docs',
-
     // 禁止提取 h2, h3 标签链接到侧边栏中
     sidebarDepth: 0,
 
