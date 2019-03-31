@@ -167,6 +167,7 @@ module.exports = {
       {
         title: 'vue',
         children: [
+          '/vue/vue-all.md',
           '/vue/vue-eslint.md',
           '/vue/vue-framework.md',
           '/vue/vue.md',
