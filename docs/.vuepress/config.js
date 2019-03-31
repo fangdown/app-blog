@@ -85,6 +85,9 @@ module.exports = {
           '/code/instanceof.md',
           '/code/promise.md',
           '/code/new.md',
+          '/code/ajax.md',
+          '/code/url-param.md',
+          '/code/thousand.md',
         ]
       },
       {
@@ -106,6 +109,7 @@ module.exports = {
       {
         title: 'css',
         children: [
+          '/css/flex.md',
           '/css/css-inherit.md',
           '/css/css-level.md',
           '/css/css-square.md',

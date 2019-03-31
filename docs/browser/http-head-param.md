@@ -1,5 +1,7 @@
-## 请求/返回头部
-### 骨架
+## http协议
+> 超文本传输协议
+
+### 请求骨架
 其实就2个部分，请求头部和返回头部，根据Chrome浏览器的设计，把公共的部分做为通用部分  
 理解大部分参数的意思
 ### 通用部分
@@ -37,3 +39,16 @@
 - Etag 字符串 如果没有变化返回304
 - Vary告知缓存服务器按照 Accept-Encoding 字段的内容，分别缓存不同的版本Accept-Encoding
 - X-Powered-By服务器用什么语言构建的
+
+
+### http格式
+- request
+  1. 请求行 （url,method）
+  2. 请求头 (origin,reffer, host)
+  3. 空行
+  4. 请求数据()
+- response
+  1. 状态行(stauscode,)
+  2. 消息报头(content-type, date,serfer)
+  3. 空行
+  4. 响应数据
