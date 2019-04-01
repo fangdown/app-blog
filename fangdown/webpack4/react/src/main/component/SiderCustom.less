@@ -1,0 +1,70 @@
+
+.left_bg{
+  background: #FCFDFF;
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: relative;
+  height: 100%;
+}
+
+
+/*菜单栏搜索箭头样式start*/
+.icon_menu_operate {
+  position: absolute;
+  left: 130px;
+  top: 50%;
+  width: 16px;
+  height: 32px;
+  margin-top: -6px;
+  cursor: pointer;
+  padding-left: 5px;
+  z-index: 2;
+  background: url('@images/left_icon.png')
+}
+
+.icon_menu_operate1 {
+  position: absolute;
+  left: -2px;
+  top: 50%;
+  width: 16px;
+  height: 32px;
+  margin-top: -6px;
+  cursor: pointer;
+  padding-left: 8px;
+  z-index: 2;
+  border-radius: 10px;
+  background: url('@images/right_icon.png')
+}
+/*菜单栏搜索箭头样式end*/
+
+/*覆盖全局菜单栏样式*/
+:global(.left_menu_hi) {
+  :global(.ant-menu-vertical) :global(.ant-menu-item),
+  :global(.ant-menu-inline) :global(.ant-menu-item),
+  :global(.ant-menu-vertical) :global(.ant-menu-submenu-title),
+  :global(.ant-menu-inline) :global(.ant-menu-submenu-title) {
+    line-height: 40px;
+    height: auto;
+    margin-top: 20px;
+    left:0;
+    a {
+      font-size: 14px;
+    }
+  }
+}
+
+/*覆盖菜单栏背景高亮*/
+.sider_children{
+  background: #FCFDFF;
+  margin-top: 30px;
+  border-right:1px solid #FCFDFF;
+}
+:global(.ant-menu-item-selected){
+    background: none !important;
+}
+.left_bg{
+:global(.ant-menu-item:after){
+    top: 14px !important;
+    height: 14px;
+}
+}
