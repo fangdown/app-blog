@@ -74,6 +74,8 @@ module.exports = {
       {
         title: '手写代码',
         children: [
+          '/code/sort.md',
+          '/code/flat.md',
           '/code/call-apply-bind.md',
           '/code/deepClone.md',
           '/code/defineProperty.md',
@@ -192,6 +194,7 @@ module.exports = {
       {
         title: 'webpack',
         children: [
+          '/webpack/webpack-image.md',
           '/webpack/bundle.md',
           '/webpack/webpack4-css-module.md',
           '/webpack/package-lock.md',
