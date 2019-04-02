@@ -74,6 +74,9 @@ module.exports = {
       {
         title: '手写代码',
         children: [
+          '/code/v-component.md',
+          '/code/componentIs.md',
+          '/code/v-model.md',
           '/code/sort.md',
           '/code/flat.md',
           '/code/call-apply-bind.md',
