@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <canvas id="canvas" width="1200" height="400" tabindex="0"></canvas>
+  <script>
+    const displayRow = [{
+      "index": 0,
+      "y": 32
+    },
+    {
+      "index": 1,
+      "y": 60
+    },
+    {
+      "index": 2,
+      "y": 88
+    },
+    {
+      "index": 3,
+      "y": 116
+    },
+    {
+      "index": 4,
+      "y": 144
+    },
+    {
+      "index": 5,
+      "y": 172
+    },
+    {
+      "index": 6,
+      "y": 200
+    },
+    {
+      "index": 7,
+      "y": 228
+    },
+    {
+      "index": 8,
+      "y": 256
+    }, {
+      "index": 9,
+      "y": 284
+    }, {
+      "index": 10,
+      "y": 312
+    }, {
+      "index": 11,
+      "y": 340
+    }, {
+      "index": 12,
+      "y": 368
+    }, {
+      "index": 13,
+      "y": 396
+    }, {
+      "index": 14,
+      "y": 424
+    }, {
+      "index": 15,
+      "y": 452
+    }, {
+      "index": 16,
+      "y": 480
+    }, {
+      "index": 17,
+      "y": 508
+    }, {
+      "index": 18,
+      "y": 536
+    }, {
+      "index": 19,
+      "y": 564
+    }, {
+      "index": 20,
+      "y": 592
+    }, {
+      "index": 21,
+      "y": 620
+    }, {
+      "index": 22,
+      "y": 648
+    }
+    ]
+
+    const cols = [{
+      "key": "$$index",
+      "label": "序号",
+      "width": 40,
+      "fixed": "left",
+      "show": true,
+      "_index": 0,
+      "x": 0
+    }, {
+      "key": "$$operation",
+      "label": "操作",
+      "width": 80,
+      "fixed": "left",
+      "show": true,
+      "_index": 1,
+      "x": 40
+    }]
+    [{
+      "key": "$$index",
+      "label": "序号",
+      "width": 40,
+      "fixed": "left",
+      "show": true,
+      "_index": 0,
+      "x": 0
+    }, {
+      "label": "客户名称",
+      "key": "companyname",
+      "width": 70,
+      "show": true,
+      "index": 2,
+      "$show": true,
+      "auth": true,
+      "_index": 1,
+      "x": 40
+    }, {
+      "label": "创建时间",
+      "key": "createtime",
+      "width": 138,
+      "filter": "minute",
+      "show": true,
+      "index": 3,
+      "$show": true,
+      "auth": true,
+      "_index": 2,
+      "x": 110
+    }, {
+      "label": "上月利",
+      "key": "profit",
+      "width": 51,
+      "show": true,
+      "index": 7,
+      "$show": true,
+      "auth": true,
+      "_index": 3,
+      "x": 248
+    }, {
+      "label": "上月货好准点率",
+      "key": "goods_rate",
+      "width": 103,
+      "show": true,
+      "index": 8,
+      "$show": true,
+      "auth": true,
+      "_index": 4,
+      "x": 299
+    }, {
+        "label": "上月当天达准确率",
+        "key": "thatday_rate",
+        "width": 116,
+        "show": true,
+        "index": 9,
+        "$show": true,
+        "auth": true,
+        "_index": 5,
+        "x": 402
+      }]
+
+    let canvas = document.getElementById('canvas')
+    let ctx = canvas.getContext('2d')
+    // 画横线
+    let width = 2242
+    let disy = 0
+    let disx = 0
+    displayRow.forEach(item => {
+      ctx.beginPath()
+      ctx.lineWidth = 1
+      ctx.strokeStyle = '#c1bfc7'
+      ctx.moveTo(0 - disx, item.y - disy)
+      ctx.lineTo(width - disx, item.y - disy)
+      ctx.stroke()
+    })
+    // 画竖线
+    cols.forEach(item => {
+      let x = item.x + item.width - disx
+      ctx.beginPath()
+      ctx.lineWidth = 1 * 2
+      // console.log(item.label, x)
+      ctx.moveTo(x, 0)
+      ctx.lineTo(x, canvas.height)
+      ctx.stroke()
+    })
+    // 画表头
+    ctx.fillStyle = headerColor
+    ctx.fillRect(-1, 0, hWidth, headerH)
+    ctx.lineWidth = 1
+    ctx.strokeStyle = lineColor
+    ctx.font = `bold 13px`
+    ctx.textBaseline = 'middle'
+    this.repeatPainHeader = {}
+    cols.forEach(item => {
+      const x = item.x + item.width - disx
+      let text = item.label
+      // 二级表头，只画一次
+      if (item._parentkey && item._parent && !this.repeatPainHeader[item._parentkey]) {
+        let pw = 0
+        let j = item._pindex
+        const arr = item._parent.children
+        for (; j < arr.length; j++) {
+          let width = this.colWidthMap[arr[j].key] || arr[j].width
+          pw += parseInt(width)
+        }
+        let w = (pw + item.x) - disx
+        ctx.beginPath()
+        ctx.moveTo(w, 0)
+        ctx.lineTo(w, headerH)
+        ctx.stroke()
+        ctx.beginPath()
+        ctx.moveTo(item.x - disx, midHeaderH)
+        ctx.lineTo(w, midHeaderH)
+        ctx.stroke()
+        ctx.fillStyle = headerTextColor
+        let label = textOverflow(textCtx, item._parent.label, item._parent.width, ratio).text
+        ctx.fillText(label, (item._parent.x + (item._parent.width / 2) - ((item._parent.label.length * 12) / 2)) - disx, headerH / 4)
+        this.repeatPainHeader[item._parentkey] = 1
+      }
+      let sy = item._parentkey ? midHeaderH : 0
+      ctx.beginPath()
+      ctx.moveTo(x, sy)
+      ctx.lineTo(x, headerH)
+      ctx.stroke()
+      // 横线
+      ctx.fillStyle = headerTextColor
+      let textx = item.x + (cellPaddingWidth * ratio) - disx
+      if (!this.excludeSort[item.key]) {
+        text = textOverflow(textCtx, text, item.width, ratio).text
+      }
+      const texty = item._parentkey ? (3 * headerH / 4) : midHeaderH
+      ctx.fillText(text, textx, texty)
+      if (item.key === excludeSort.$$selection) {
+        let img = CHECK_BORDER
+        if (checkedRow.length > 0 && checkedRow.length < allRowData.length) {
+          img = CHECK_HENG
+        } else if (checkedRow.length === allRowData.length && allRowData.length > 0) {
+          img = CHECK_RIGHT
+        }
+        ctx.drawImage(img, textx + 6 * ratio, texty - 7 * ratio, 14 * ratio, 14 * ratio)
+        return
+      }
+      if (item.key !== excludeSort.$$index && item.key !== excludeSort.$$operation && !item._showImage && !item._showCheckbox && !item._showUpload) {
+        let buttonSort = !item._showButton || (item._showButton && !item.button)
+        if (buttonSort && item.sortKeys && item.sortKeys.length === 2) {
+          let width = sortPosition(textCtx, item.label)
+          const diff = (2 * cellPaddingWidth + 8) * ratio
+          if (item.width > width + diff) {
+            this.paintHeaderSort(item, textx, texty, width)
+          }
+        }
+      }
+    })
+    ctx.beginPath()
+    ctx.moveTo(0, headerH)
+    ctx.lineTo(canvasConfig.aw, headerH)
+    ctx.stroke()
+  </script>
+</body>
+
+</html>
