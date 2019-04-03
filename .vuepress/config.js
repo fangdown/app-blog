@@ -74,6 +74,8 @@ module.exports = {
       {
         title: '手写代码',
         children: [
+          '/code/canvas.md',
+          '/code/mixins.md',
           '/code/v-component.md',
           '/code/componentIs.md',
           '/code/v-model.md',
@@ -262,6 +264,7 @@ module.exports = {
         title: '协作',
         children: [
           '/team/git.md',
+          '/team/scrum.md',
         ]
       },
       {
