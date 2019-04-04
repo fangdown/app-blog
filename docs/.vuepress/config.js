@@ -195,6 +195,7 @@ module.exports = {
           '/node/buffer.md',
           '/node/module.md',
           '/node/koa-mongodb.md',
+          '/node/controller.md',
         ]
       },
       {
