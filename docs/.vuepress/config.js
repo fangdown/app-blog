@@ -266,7 +266,7 @@ module.exports = {
         title: '协作',
         children: [
           '/team/git.md',
-          '/team/scrum.md',
+          '/team/jmeter.md',
         ]
       },
       {
