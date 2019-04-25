@@ -116,3 +116,11 @@ define(function(require, exports, module){
 ```
 - AMD:API根据使用范围有区别，但使用同一个api接口
 - CMD:每个API的职责单一
+
+### es6 import和require用法和区别
+
+加载方式 | 规范| 命令| 特点
+-| -| -|-|
+运行时加载 | CommonJS/AMD | require | 社区方案，提供了服务器/浏览器的模块加载方案。非语言层面的标准。只能在运行时确定模块的依赖关系及输入/输出的变量，无法进行静态优化。
+编译时加载 | ESMAScript6+	 | import	 | 语言规格层面支持模块功能。支持编译时静态分析，便于JS引入宏和类型检验。动态绑定。
+[参考](https://blog.csdn.net/DimaLLJ/article/details/78384875 )

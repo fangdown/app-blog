@@ -74,6 +74,7 @@ module.exports = {
       {
         title: '手写代码',
         children: [
+          '/code/replace-reg.md',
           '/code/rgb.md',
           '/code/canvas.md',
           '/code/mixins.md',
@@ -94,6 +95,13 @@ module.exports = {
           '/code/ajax.md',
           '/code/url-param.md',
           '/code/thousand.md',
+        ]
+      },
+      {
+        title: '项目难点',
+        collapsable: false,
+        children: [
+          '/difficultPoint/html2canvas.md'
         ]
       },
       {
