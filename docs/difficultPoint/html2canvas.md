@@ -37,7 +37,49 @@
 - 移动端验证
   发现生成的图片还是有点模糊，经过一番折腾后，是因以下原因造成
   - 图片的大小问题， 2倍屏下，如375px宽时，拍照的时候生成的图片其实是750px，3倍屏的时候宽度是1125px，图片原始宽度为640px，那么图片被拉大了，自然就会变的模糊， 但是依然在可接受范围之内；再验证，在320px宽时，生成的图片则和原图一模一样，从这点可以看出html2canvas拍照的能力还是非常强的，没有损失。这个原因之前是没有发现，后来才发现。
-
+```js
+    const base64: string = await screenshot(pageContent, {
+      mode: 1,
+      logging: false,
+      width: rect.width,
+      height: rect.height,
+      onBeforeRender: () => {
+        preprocess(pageItem);
+        // 处理背景图片
+        const bgImageUrl = getProxyUrl(page.bgImage || '');
+        const tempBgImg = document.createElement('img');
+        tempBgImg.src = bgImageUrl;
+        tempBgImg.style.width = '100%';
+        tempBgImg.height = rect.height;
+        tempBgImg.style.objectFit = 'cover';
+        pageContent.insertBefore(tempBgImg, pageContent.firstChild);
+        bgImage.style.display = 'none';
+      },
+      onAfterRender: () => {
+        postprocess(pageItem);
+        const tempBgDiv = pageContent.querySelector('.temp-bg');
+        tempBgDiv && pageContent.removeChild(tempBgDiv);
+        bgImage.style.display = 'block';
+      },
+    });
+  ```
+- canvas双倍和去齿轮-对于图片类效果不明显，无感知，所以没有加上
+  ```js
+    const canvas=document.createElement("canvas");
+    canvas.width=rect.width*2
+    canvas.height=rect.height*2
+    canvas.style.width=rect.width+"px"
+    canvas.style.height=rect.height+"px"
+    var context=canvas.getContext("2d")
+    context.scale(2,2);
+    onAfterRender: () => {
+    // 【重要】关闭抗锯齿
+      context.mozImageSmoothingEnabled = false;
+      context.webkitImageSmoothingEnabled = false;
+      context.msImageSmoothingEnabled = false;
+      context.imageSmoothingEnabled = false;
+    }
+  ```
 4. 结论
 - html2canvas 对background方式的图片拍照没有image方式好，采用image方式
 - 图片自身的问题，当一个图片被拉大的时候会有一些失真的，模糊，所以在原图上又有选择
