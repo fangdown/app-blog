@@ -84,6 +84,6 @@
 - html2canvas 对background方式的图片拍照没有image方式好，采用image方式
 - 图片自身的问题，当一个图片被拉大的时候会有一些失真的，模糊，所以在原图上又有选择
 
-
+[参考](https://segmentfault.com/a/1190000011478657)
 
 
