@@ -74,6 +74,7 @@ module.exports = {
       {
         title: '手写代码',
         children: [
+          '/code/node-set-cdn-file.md',
           '/code/replace-reg.md',
           '/code/rgb.md',
           '/code/canvas.md',
