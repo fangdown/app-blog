@@ -74,6 +74,8 @@ module.exports = {
       {
         title: '手写代码',
         children: [
+          '/code/node-set-cdn-file.md',
+          '/code/replace-reg.md',
           '/code/rgb.md',
           '/code/canvas.md',
           '/code/mixins.md',
@@ -94,6 +96,13 @@ module.exports = {
           '/code/ajax.md',
           '/code/url-param.md',
           '/code/thousand.md',
+        ]
+      },
+      {
+        title: '项目难点',
+        collapsable: false,
+        children: [
+          '/difficultPoint/html2canvas.md'
         ]
       },
       {
@@ -274,7 +283,7 @@ module.exports = {
         title: '协作',
         children: [
           '/team/git.md',
-          '/team/scrum.md',
+          '/team/jmeter.md',
         ]
       },
       {

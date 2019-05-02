@@ -1,7 +1,7 @@
-import { http } from '../utils/http'
+// import { http } from '../utils/http'
 
 const report = (params) => {
-  http('syslog.frontendOperationLog.save', params, false)
+  // http('syslog.frontendOperationLog.save', params, false)
 }
 
 const install = (Vue) => {

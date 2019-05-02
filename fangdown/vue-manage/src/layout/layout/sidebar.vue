@@ -44,6 +44,8 @@
       <template slot="title">其他</template>
       <el-menu-item index="1-3-1"
                     @click="pushRoute('/demo/system/log')">日志查看</el-menu-item>
+      <el-menu-item index="1-3-2"
+                    @click="pushRoute('/demo/system/html2canvas')">页面转canvas</el-menu-item>
     </el-submenu>
   </el-menu>
 </template>
