@@ -150,6 +150,7 @@ module.exports = {
       {
         title: '项目经验',
         children: [
+          '/experience/fiddler-https.md',
           '/experience/compat.md',
           '/experience/url-length.md',
           '/experience/normal-1.md',
@@ -201,6 +202,13 @@ module.exports = {
       {
         title: 'webpack',
         children: [
+          '/webpack/source-bundle.md',
+          '/webpack/source-js-loader.md',
+          '/webpack/source-css-loader.md',
+          '/webpack/source-css-loader.md',
+          '/webpack/source-html.md',
+          '/webpack/source-image-loader.md',
+          '/webpack/source-global-visible.md',
           '/webpack/webpack-image.md',
           '/webpack/bundle.md',
           '/webpack/webpack4-css-module.md',
