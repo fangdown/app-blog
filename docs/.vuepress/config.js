@@ -38,7 +38,7 @@ module.exports = {
         title: 'typescript',
         collapsable: false,
         children: [
-          '/typescript/base.md',
+          '/typescript/basic.md',
         ]
       },
       {
@@ -89,6 +89,7 @@ module.exports = {
           '/code/v-component.md',
           '/code/componentIs.md',
           '/code/v-model.md',
+          '/code/vue-component.md',
           '/code/sort.md',
           '/code/flat.md',
           '/code/call-apply-bind.md',
