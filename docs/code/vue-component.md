@@ -1,4 +1,4 @@
-## 注册组件
+## vue注册组件
 ```js
 // ui.js
 import c1 from './packages/hello-world/index.js';
