@@ -35,6 +35,13 @@ module.exports = {
 
     sidebar: [
       {
+        title: 'typescript',
+        collapsable: false,
+        children: [
+          '/typescript/base.md',
+        ]
+      },
+      {
         title: '基础',
         collapsable: false,
         children: [
@@ -211,6 +218,10 @@ module.exports = {
       {
         title: 'webpack',
         children: [
+          '/webpack/source-mult-entry.md',
+          '/webpack/source-dev-tool.md',
+          '/webpack/source-proxy.md',
+          '/webpack/source-variable.md',
           '/webpack/source-bundle.md',
           '/webpack/source-js-loader.md',
           '/webpack/source-css-loader.md',
