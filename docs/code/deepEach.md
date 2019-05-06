@@ -1,3 +1,9 @@
+## 深度优先遍历
+
+>思路： 对一个对象进行遍历， 如果发现有子集则递归遍历
+
+```js
+
 const obj = {
   type: 'div',
   id:0,
@@ -47,3 +53,6 @@ function walk(obj, index){
   })
 }
 walk(obj, Index)
+
+
+```

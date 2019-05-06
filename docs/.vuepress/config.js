@@ -35,6 +35,13 @@ module.exports = {
 
     sidebar: [
       {
+        title: 'typescript',
+        collapsable: false,
+        children: [
+          '/typescript/basic.md',
+        ]
+      },
+      {
         title: '基础',
         collapsable: false,
         children: [
@@ -79,9 +86,10 @@ module.exports = {
           '/code/rgb.md',
           '/code/canvas.md',
           '/code/mixins.md',
-          '/code/v-component.md',
+          '/code/vue-component.md',
           '/code/componentIs.md',
           '/code/v-model.md',
+          '/code/vue-component.md',
           '/code/sort.md',
           '/code/flat.md',
           '/code/call-apply-bind.md',
@@ -159,6 +167,7 @@ module.exports = {
       {
         title: '项目经验',
         children: [
+          '/experience/fiddler-https.md',
           '/experience/compat.md',
           '/experience/url-length.md',
           '/experience/normal-1.md',
@@ -210,7 +219,17 @@ module.exports = {
       {
         title: 'webpack',
         children: [
-          '/webpack/webpack-image.md',
+          '/webpack/source-mult-entry.md',
+          '/webpack/source-dev-tool.md',
+          '/webpack/source-proxy.md',
+          '/webpack/source-variable.md',
+          '/webpack/source-bundle.md',
+          '/webpack/source-js-loader.md',
+          '/webpack/source-css-loader.md',
+          '/webpack/source-css-loader.md',
+          '/webpack/source-html.md',
+          '/webpack/source-image-loader.md',
+          '/webpack/source-global-visible.md',
           '/webpack/bundle.md',
           '/webpack/webpack4-css-module.md',
           '/webpack/package-lock.md',
