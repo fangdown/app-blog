@@ -288,6 +288,9 @@ module.exports = {
           '/server/mongodb/deploy.md',
           '/server/mongodb/job.md',
           '/server/nginx/proxy-pass.md',
+          '/server/docker/what-docker.md',
+          '/server/docker/why-docker.md',
+          '/server/docker/how-docker.md',
         ]
       },
       {
