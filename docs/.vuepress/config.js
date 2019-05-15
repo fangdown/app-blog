@@ -110,7 +110,8 @@ module.exports = {
         title: '项目难点',
         collapsable: false,
         children: [
-          '/difficultPoint/html2canvas.md'
+          '/difficultPoint/html2canvas.md',
+          '/difficultPoint/svg2canvas.md'
         ]
       },
       {
