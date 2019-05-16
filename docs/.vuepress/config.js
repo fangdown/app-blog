@@ -219,6 +219,7 @@ module.exports = {
       {
         title: 'webpack',
         children: [
+          '/webpack/source-optimize.md',
           '/webpack/source-mult-entry.md',
           '/webpack/source-dev-tool.md',
           '/webpack/source-proxy.md',
