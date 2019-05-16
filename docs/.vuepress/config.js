@@ -110,7 +110,8 @@ module.exports = {
         title: '项目难点',
         collapsable: false,
         children: [
-          '/difficultPoint/html2canvas.md'
+          '/difficultPoint/html2canvas.md',
+          '/difficultPoint/svg2canvas.md'
         ]
       },
       {
@@ -308,6 +309,9 @@ module.exports = {
           '/server/mongodb/deploy.md',
           '/server/mongodb/job.md',
           '/server/nginx/proxy-pass.md',
+          '/server/docker/what-docker.md',
+          '/server/docker/why-docker.md',
+          '/server/docker/how-docker.md',
         ]
       },
       {
