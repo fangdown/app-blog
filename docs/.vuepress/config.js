@@ -94,6 +94,7 @@ module.exports = {
           '/code/flat.md',
           '/code/call-apply-bind.md',
           '/code/deepClone.md',
+          '/code/isEqual.md',
           '/code/defineProperty.md',
           '/code/proxy.md',
           '/code/currying.md',
