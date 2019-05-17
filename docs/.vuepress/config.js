@@ -42,6 +42,14 @@ module.exports = {
         ]
       },
       {
+        title: '架构设计',
+        collapsable: false,
+        children: [
+          '/framework/react-redux-1.md',
+          '/framework/node-middleware-1.md',
+        ]
+      },
+      {
         title: '基础',
         collapsable: false,
         children: [
