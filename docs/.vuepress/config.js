@@ -38,6 +38,7 @@ module.exports = {
         title: 'typescript',
         collapsable: false,
         children: [
+          '/typescript/type-in-work.md',
           '/typescript/basic.md',
         ]
       },
