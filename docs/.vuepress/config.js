@@ -121,6 +121,7 @@ module.exports = {
         title: '项目难点',
         collapsable: false,
         children: [
+          '/difficultPoint/addEventListener.md',
           '/difficultPoint/reactLongList.md',
           '/difficultPoint/html2canvas.md',
           '/difficultPoint/svg2canvas.md'
@@ -220,6 +221,7 @@ module.exports = {
       {
         title: 'nodejs',
         children: [
+          '/node/nrm.md',
           '/node/node-server-js.md',
           '/node/node.md',
           '/node/fs.md',

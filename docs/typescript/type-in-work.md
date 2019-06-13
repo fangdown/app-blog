@@ -1,4 +1,4 @@
-## 类型总结
+## 常用typescript类型总结
 
 1. interface 接口
 ```js
