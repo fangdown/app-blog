@@ -90,6 +90,7 @@ module.exports = {
       {
         title: '手写代码',
         children: [
+          '/code/https-update.md',
           '/code/subscribe-publish.md',
           '/code/single-mode.md',
           '/code/node-set-cdn-file.md',
