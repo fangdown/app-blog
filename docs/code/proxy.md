@@ -23,10 +23,6 @@
         return Reflect.get(target, key, receiver)
       },
       set: function (target, key, value, receiver) {
-        console.log('key', key)
-        console.log('target', target) // {}
-        console.log('value', value)
-        console.log('receiver', receiver)
         if (key === 'value') {
           document.getElementById('name').innerHTML = value
         }

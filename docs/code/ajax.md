@@ -15,4 +15,8 @@ xhr.onreadystatechange = function(e){
     }
   }
 }
+xhr.onload = function(){
+  console.log("READYSTATE"+ xhr.readyState);
+   onsole.log(this.responseText);
+}
 ```
