@@ -23,4 +23,17 @@ ssh  root@148.70.216.46 不用输入密码了
 
 ### 本机安装jekins
 1. 安装下一步下一步即可，要记住3个账号的密码
+
+### 配置全局配置
+系统配置-》全局配置-》Publish over SSH
+- 设置Passphrase 密码
+- 设置SSH Servers
+    - name fd
+    - Hostname 148.70.216.46
+    - Username root
+    - Remote Directory	
+
+### 创建任务
+系统配置-》创建任务
+1.  源码管理
   

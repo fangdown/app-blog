@@ -311,6 +311,7 @@ module.exports = {
       {
         title: '后端',
         children: [
+          '/server/ci/ci.md',
           '/server/linux.md',
           '/server/mongodb/mingling.md',
           '/server/mongodb/build.md',

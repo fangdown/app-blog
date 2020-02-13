@@ -52,11 +52,27 @@ module.exports = {
 
 ### vscode设置
 在首选项中，配置页面中添加
+自动保存
 ```js
-"eslint.validate": [
-      "javascript",
-      "javascriptreact",
-      "html",
+{
+    "editor.tabSize": 2,
+    "files.autoSave": "onFocusChange",
+    "eslint.autoFixOnSave": true,
+    "files.associations": {
+      "*.vue": "vue"
+    },
+    "eslint.options": {
+      "extensions": [
+          ".js",
+          ".vue"
+      ]
+    },
+    "eslint.validate": [
+      "javascript",{
+          "language": "vue",
+          "autoFix": true
+      },"html",
       "vue"
-]
+    ]
+  }
 ```
