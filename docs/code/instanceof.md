@@ -6,7 +6,7 @@ function instanceof(left, right){
   let prototype = right.prototype;
   while(true){
     if(proto === null) return false
-    return proto === prototype
+    if(proto === prototype) return true
     proto = prototype
   }
 }

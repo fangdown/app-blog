@@ -79,3 +79,12 @@ rm -rf .git
 
 11. mac显示分支
 [参考](https://www.jianshu.com/p/9f64abc94d45)
+
+12. 比较分支
+- -w 忽略空格导致的差异
+  git diff prod..dev -w
+- 比较两个文件
+  git diff prod..dev -w xx/xxx/xxx.jsx
+
+13. 忽略空格merge
+- git merge -Xignore-all-space origin/prod（当前在dev分支）

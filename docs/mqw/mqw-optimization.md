@@ -32,8 +32,9 @@ etag 文件内容变化即改变hash字符串，缺点是服务器集群容易�
 4. 4个左右域名交叉
 
 ### dns预解析
+```
 <meta http-equiv="x-dns-prefetch-control" content="on">
 <link rel="dns-prefetch" rel="http://a.com" />
-
+```
 ### 并行加速数控制
 6个以内

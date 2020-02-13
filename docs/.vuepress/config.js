@@ -38,6 +38,7 @@ module.exports = {
         title: 'typescript',
         collapsable: false,
         children: [
+          '/typescript/type-in-work.md',
           '/typescript/basic.md',
         ]
       },
@@ -89,6 +90,9 @@ module.exports = {
       {
         title: '手写代码',
         children: [
+          '/code/https-update.md',
+          '/code/subscribe-publish.md',
+          '/code/single-mode.md',
           '/code/node-set-cdn-file.md',
           '/code/replace-reg.md',
           '/code/rgb.md',
@@ -119,6 +123,8 @@ module.exports = {
         title: '项目难点',
         collapsable: false,
         children: [
+          '/difficultPoint/addEventListener.md',
+          '/difficultPoint/reactLongList.md',
           '/difficultPoint/html2canvas.md',
           '/difficultPoint/svg2canvas.md'
         ]
@@ -217,6 +223,8 @@ module.exports = {
       {
         title: 'nodejs',
         children: [
+          '/node/nrm.md',
+          '/node/node-server-js.md',
           '/node/node.md',
           '/node/fs.md',
           '/node/http.md',

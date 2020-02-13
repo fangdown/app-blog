@@ -1,3 +1,6 @@
+## 观察者模式及发布订阅者模式
+### 观察者模式（正儿八经的设计模式）
+```js
 
 /**
  * 观察者模式
@@ -30,6 +33,12 @@ hunterB.subscribe(hunterC, function(){
 })
 hunterC.publish('1000')
 
+// A 抱歉， 在忙
+// B 会帮助
+```
+
+### 发布订阅者模式（根据观察者模式衍生的设计模式）
+```js
 /**
  * 发布订阅模式
  * 核心：调度中心HunterUnion
@@ -80,3 +89,7 @@ hunterC.publish('1000')
  })
 
  hunterBoss.publish('tiger', 1000)
+// 发布打tiger任务， 金额1000
+// X 抱歉， 在忙
+// Y 会帮助打老虎
+```
