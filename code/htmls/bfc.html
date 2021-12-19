@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <style>
+    .t1{
+      height: 20px;
+      margin: 100px;
+    }
+    .bfc1{
+      overflow: auto;
+    }
+
+  </style>
+  <p class="t1">1</p>
+  <div class="bfc1">
+    <p class="t1">2</p>
+  </div>
+  <style>
+    .bfc2{
+      border: 1px solid #f4f;
+      overflow: hidden;
+    }
+    .f1{
+      float:left;
+      height: 100px;
+      width: 100px;
+      border: 1px solid #ddd;
+    }
+  </style>
+  <div class="bfc2">
+    <div class="f1">float</div>
+    <div class="f1">float</div>
+  </div>
+  <style>
+    .aside{
+      float: left;
+      height: 100px;
+      width: 100px;
+      background-color: green;
+    }
+    .main{
+      height: 150px;
+      background-color: #ddd;
+      overflow: hidden;
+    }
+  </style>
+  <div class="bfc3">
+    <div class="aside">aside</div>
+    <div class="main"></div>
+  </div>
+</body>
+</html>

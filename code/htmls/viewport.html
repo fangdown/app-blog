@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <style>
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .target {
+        margin: 5px;
+        width: 20px;
+        height: 20px;
+        background: red;
+      }
+    </style>
+
+    <div class="container"></div>
+    <script>
+      const $container = $(".container");
+      function createTagets() {
+        const htmls = new Array(10000)
+          .fill('<div class="target"></div>')
+          .join("");
+        $container.html(htmls);
+      }
+      function isInViewPort(element) {
+        const viewWidth =
+          window.innerWidth || document.documentElement.clientWidth;
+        const viewHeight =
+          window.innerHeight || document.documentElement.clientHeight;
+        const { top, right, bottom, left } = element.getBoundingClientRect();
+
+        return (
+          top >= 0 && left >= 0 && right <= viewWidth && bottom <= viewHeight
+        );
+      }
+      createTagets();
+      const targets = $(".target");
+      $(window).on("scroll", () => {
+        // 避免卡顿
+        window.requestAnimationFrame(() => {
+          targets.each((index, ele) => {
+            if (isInViewPort(ele)) {
+              $(ele).css("background-color", "yellow");
+            }else{
+              $(ele).css("background-color", "red");
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

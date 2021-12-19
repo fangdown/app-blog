@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+  <style>
+    .p1{
+      position: relative;
+      width: 200px;
+      height: 40px;
+      line-height: 20px;
+      overflow: hidden;
+    }
+    .p1::after{
+      content: '...';
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      padding: 0 20px 0 10px;
+      word-break: break-all;
+      background-color: #FFF;
+    }
+  </style>
+  <p class="p1">我是文本我是文本我是文本我是文本我是文本我是文本我是文本我是文本我是文本我是文本我是文本我是文本我是文本</p>
+  <p class="p1">hello world，hello world，hello world，hello world，hello world，hello world，</p>
+  <style>
+    .p2{
+      width: 200px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space:break-all;
+    }
+  </style>
+  <p class="p2">我是文本我是文本我是文本我是文本我是文本我是文本我是文本我是文本我是文本我是文本我是文本我是文本我是文本</p>
+  <p class="p2">hello world，hello world，hello world，hello world，hello world，hello world，</p>
+
+  <style> 
+    .p3{
+      position: relative;
+      width: 200px;
+      line-height: 20px;
+      overflow: hidden;
+    }
+    .p3-after::after{
+      content: '...';
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      padding-left: 40px;
+      background: -webkit-linear-gradient(left, transparent, #fff 55%);
+      word-break: break-all;
+    }
+  </style>
+  <p class="p3">
+    我是文本我是文本我是文本我是文本我是文本我是文本我是文本我是文本我是文本我是文本我是文本我是文本我是文本
+  </p>
+  <script>
+    const p3 = $('.p3')
+    const lh = parseInt(p3.css('line-height'))
+    const p3Height = p3.height()
+    if(p3Height/lh > 1){
+      p3.addClass('p3-after')
+      p3.height('60')
+    } else {
+      p3.removeClass('p3-after')
+    }
+  </script>
+</body>
+</html>

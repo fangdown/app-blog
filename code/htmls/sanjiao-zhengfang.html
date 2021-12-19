@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <style>
+    p{
+      box-sizing: border-box;
+    }
+    .sanjiao1{
+      width: 100px;
+      height: 100px;
+      border-width: 20px;
+      border-style:solid;
+      border-color: #96ceb4 #ffeead #d9534f #ffad60;
+    }
+  </style>
+  <p class="sanjiao1"></p>
+
+  <style>
+    .sanjiao2{
+      width: 0;
+      height: 0;
+      border-width: 50px;
+      border-style:solid;
+      border-color: transparent transparent #ffad60 transparent ;
+    }
+  </style>
+  <!-- 实心三角形 -->
+  <p class="sanjiao2"></p>
+
+  <!-- 空心三角形 -->
+  <style>
+    .sanjiao3{
+      position: relative;
+      width: 0;
+      height: 0;
+      border-width: 0 50px 50px;
+      border-style:solid;
+      border-color: transparent transparent #ffad60 transparent ;
+    }
+    .sanjiao3::after{
+      content: '';
+      border-width: 0 40px 40px;
+      border-style:solid;
+      border-color:transparent transparent #fff; ;
+      position: absolute;
+      left: -40px;
+      top: 6px;
+    }
+  </style>
+  <p class="sanjiao3"></p>
+  <style>
+    .zhengfang1{
+      width: 100%;
+      height: 100vw;
+      background-color: #96ceb4;
+    }
+  </style>
+  <p class="zhengfang1"></p>
+
+  <style>
+    .zhengfang2{
+      width: 100%;
+      padding-bottom: 100%;
+      background-color: #96ceb4;
+    }
+  </style>
+  <p class="zhengfang2"></p>
+  <style>
+    .zhengfang3{
+      width: 100%;
+      background-color: #96ceb4;
+    }
+    .zhengfang3::after{
+      content: '';
+      padding-top: 100%;
+      display: block;
+    }
+  </style>
+  <p class="zhengfang3"></p>
+</body>
+</html>

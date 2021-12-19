@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <style>
+    .parent{
+      width: 200px;
+      height: 200px;
+      border: 1px solid #ddd;
+      position: relative;
+    }
+    .child{
+      width: 100px;
+      height: 100px;
+      border: 1px solid #f43;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+    }
+  </style>
+  <div class="parent">
+    <div class="child"></div>
+  </div>
+
+  <style>
+    .parent2{
+      width: 200px;
+      height: 200px;
+      border: 1px solid #ddd;
+      position: relative;
+    }
+    .child2{
+      width: 100px;
+      height: 100px;
+      border: 1px solid #f43;
+      position: absolute;
+      left: 50%;
+      top:50%;
+      margin-left:-50px;
+      margin-top: -50px;
+    }
+  </style>
+  <div class="parent2">
+    <div class="child2"></div>
+  </div>
+
+  <style>
+    .parent3{
+      width: 200px;
+      height: 200px;
+      border: 1px solid #ddd;
+      position: relative;
+    }
+    .child3{
+      width: 100px;
+      height: 100px;
+      border: 1px solid #f43;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translateX(-50%) translateY(-50%);
+    }
+  </style>
+  <div class="parent3">
+    <div class="child3"></div>
+  </div>
+
+  <style>
+    .parent4{
+      width: 200px;
+      height: 200px;
+      border: 1px solid #ddd;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .child4{
+      width: 100px;
+      height: 100px;
+      border: 1px solid #f43;
+    }
+  </style>
+  <div class="parent4">
+    <div class="child4"></div>
+  </div>
+
+
+  <style>
+    .parent5{
+      width: 200px;
+      height: 200px;
+      border: 1px solid #ddd;
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+    }
+    .child5{
+      width: 100px;
+      height: 100px;
+      border: 1px solid #f43;
+      /* 必须也要设置display */
+      display: inline-block; 
+    }
+  </style>
+  <div class="parent5">
+    <div class="child5"></div>
+  </div>
+
+  <style>
+    .parent6{
+      width: 200px;
+      height: 200px;
+      border: 1px solid #ddd;
+      display: grid;
+      justify-content: center;
+      align-items: center;
+    }
+    .child6{
+      width: 100px;
+      height: 100px;
+      border: 1px solid #f43;
+    }
+  </style>
+  <div class="parent6">
+    <div class="child6"></div>
+  </div>
+</body>
+</html>
