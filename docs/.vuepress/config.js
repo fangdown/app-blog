@@ -83,6 +83,7 @@ module.exports = {
       //   ],
       // },
       // { text: '关于', link: '/about/' },
+      { text: '面经', link: 'https://tw.git123.cn/#/mj' },
       // {
       //   text: '收藏',
       //   link: '/pages/beb6c0bd8a66cea6/',
