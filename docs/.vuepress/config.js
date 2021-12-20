@@ -293,22 +293,31 @@ module.exports = {
     [
       'vuepress-plugin-comment', // 评论
       {
-        choosen: 'gitalk',
+        choosen: 'valine', 
         options: {
-          clientID: '95612e0b4cdb2576636e',
-          clientSecret: '157c0be1aa516348fbe70071aa41cbfa5a008d43',
-          repo: 'app-blog-comment', // GitHub 仓库
-          owner: 'fangdown', // GitHub仓库所有者
-          admin: ['fangdown'], // 对仓库有写权限的人
-          // distractionFreeMode: true,
-          pagerDirection: 'last', // 'first'正序 | 'last'倒序
-          id: '<%- (frontmatter.permalink || frontmatter.to.path).slice(-16) %>', //  页面的唯一标识,长度不能超过50
-          title: '「评论」<%- frontmatter.title %>', // GitHub issue 的标题
-          labels: ['Gitalk', 'Comment'], // GitHub issue 的标签
-          body:
-            '页面：<%- window.location.origin + (frontmatter.to.path || window.location.pathname) %>', // GitHub issue 的内容
-        },
-      },
+          el: '#valine-vuepress-comment',
+          appId: "HAlXd7aEqlpxMTl8tvQTmfGl-gzGzoHsz",
+          appKey: "UpfRutPqdT1OjBiB9PbFd1RH",
+          path: '<%- frontmatter.commentid || frontmatter.permalink %>'
+        }
+      }
+      // {
+      //   choosen: 'gitalk',
+      //   options: {
+      //     clientID: '95612e0b4cdb2576636e',
+      //     clientSecret: '157c0be1aa516348fbe70071aa41cbfa5a008d43',
+      //     repo: 'app-blog-comment', // GitHub 仓库
+      //     owner: 'fangdown', // GitHub仓库所有者
+      //     admin: ['fangdown'], // 对仓库有写权限的人
+      //     // distractionFreeMode: true,
+      //     pagerDirection: 'last', // 'first'正序 | 'last'倒序
+      //     id: '<%- (frontmatter.permalink || frontmatter.to.path).slice(-16) %>', //  页面的唯一标识,长度不能超过50
+      //     title: '「评论」<%- frontmatter.title %>', // GitHub issue 的标题
+      //     labels: ['Gitalk', 'Comment'], // GitHub issue 的标签
+      //     body:
+      //       '页面：<%- window.location.origin + (frontmatter.to.path || window.location.pathname) %>', // GitHub issue 的内容
+      //   },
+      // },
     ],
     [
       '@vuepress/last-updated', // "上次更新"时间格式
