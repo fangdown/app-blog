@@ -137,4 +137,8 @@ const Chat = () => {
 - useCallback 依赖为空，说明函数不会更新
 - handlerRef.current 保存了函数，在useCallback中拿出来用，每次执行的时候能拿到最新的参数
 
+- useCallback 的作用是让函数不变化
+- useRef.current的作用也是让函数不变化
+- 两者达到相同目的，却又跳出了闭包的陷阱
+
 ![](https://api.git123.cn/proxy/image?url=https://mmbiz.qpic.cn/mmbiz/pfCCZhlbMQRic8iaqic0nAhxHTxO0U1sPDlnYTEgt9kSHW9XBZGnLibeBOpuulTBMguUeVyF2C3relaibkBNniakoG4Q/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1)
