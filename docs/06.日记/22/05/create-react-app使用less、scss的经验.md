@@ -28,32 +28,23 @@ const {
 module.exports = {
     // ...
     addWebpackModuleRule({
-        test: /\.scss$/,
-            use: [
-                'style-loader',
-                'css-loader',
-                'sass-loader',
-                {
-                    loader: 'sass-resources-loader',
-                    options: {
-                        // 可选
-                        resources: ['./src/global/var.scss']
-                    }
-                }
-            ] 
-        }) 
+    test: /\.scss$/,
+    use: [
+      "style-loader",
+      {
+        loader: "css-loader",
+        options: {
+            modules: {
+                localIdentName: "[local]--[hash:base64:5]",
+              },
+        },
+      },
+      "sass-loader",
+    ],
+  })
 }
 ```
-- 新建/src/global/var.scss
-```
-@mixin posTl($top, $left) {
-  position: absolute;
-  left: $left;
-  top: $top;
-}
-$color: red;
-
-```
+- 可以使用```import s from './styles.scss'``` 或```import from './styles.module.scss``` 模块化
 - 重启项目即可
 
 ## 增加less
@@ -82,15 +73,16 @@ module.exports = {
     addWebpackModuleRule({
         test: /\.scss$/,
         use: [
-            'style-loader',
-            'css-loader',
-            'sass-loader',
-            {
-                loader: 'sass-resources-loader',
-                options: {
-                    resources: ['./src/global/var.scss'],
+        "style-loader",
+        {
+            loader: "css-loader",
+            options: {
+                modules: {
+                    localIdentName: "[local]--[hash:base64:5]",
                 },
             },
+        },
+        "sass-loader",
         ],
     }),
     //less-loader
