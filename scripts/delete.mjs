@@ -1,5 +1,5 @@
-import OSS from 'ali-oss'
-import readdirp from 'readdirp'
+const OSS = require('ali-oss')
+const readdirp = require('readdirp')
 
 // 该文件用于定时任务周期性删除 OSS 上的冗余资源，可通过 CRON 配置每天凌晨两点进行删除
 // 由于该脚本定时完成，所以无需考虑性能问题，故不适用 p-queue 进行并发控制
@@ -8,12 +8,12 @@ const client = new OSS({
   region: 'oss-cn-shenzhen',
   accessKeyId: process.env.ACCESS_KEY_ID,
   accessKeySecret: process.env.ACCESS_KEY_SECRET,
-  bucket: 'app-ci'
+  bucket: 'app-blog'
 })
 
 async function getCurrentFiles () {
   const files = []
-  for await (const entry of readdirp('./build', { type: 'files' })) {
+  for await (const entry of readdirp('./html', { type: 'files' })) {
     files.push(entry.path)
   }
   return files

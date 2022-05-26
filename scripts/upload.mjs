@@ -1,8 +1,8 @@
-import OSS from 'ali-oss'
-import { createReadStream } from 'fs'
-import { resolve } from 'path'
-import readdirp from 'readdirp'
-import PQueue from 'p-queue'
+const OSS = require('ali-oss')
+const { createReadStream } = require('fs')
+const { resolve } = require('path')
+const readdirp = require('readdirp')
+const PQueue = require('p-queue')
 
 const queue = new PQueue({ concurrency: 10 })
 
