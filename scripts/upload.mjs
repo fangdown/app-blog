@@ -1,15 +1,18 @@
-const OSS = require('ali-oss')
-const { createReadStream } = require('fs')
-const { resolve } = require('path')
-const readdirp = require('readdirp')
-const PQueue = require('p-queue')
+import OSS from 'ali-oss'
+import fs, { createReadStream } from 'fs'
+import { resolve } from 'path'
+import readdirp from 'readdirp'
+import PQueue from 'p-queue'
 
 const queue = new PQueue({ concurrency: 10 })
-
+const ACCESS_KEY_ID='LTAI5tPmxiqymHt2tDQ1Gom6'
+const ACCESS_KEY_SECRET='kNLt0emP66opzFTzfvtCfijZKQlFAY'
 const client = new OSS({
   region: 'oss-cn-shenzhen',
-  accessKeyId: process.env.ACCESS_KEY_ID,
-  accessKeySecret: process.env.ACCESS_KEY_SECRET,
+  // accessKeyId: process.env.ACCESS_KEY_ID,
+  // accessKeySecret: process.env.ACCESS_KEY_SECRET,
+  accessKeyId: ACCESS_KEY_ID,
+  accessKeySecret: ACCESS_KEY_SECRET,
   bucket: 'app-blog'
 })
 
@@ -54,13 +57,30 @@ async function main() {
     // uploadFile(entry.path)
   }
   // 上传携带 hash 的文件
-  for await (const entry of readdirp('./html/static', { type: 'files' })) {
-    queue.add(() => uploadFile(`static/${entry.path}`, true))
-    // uploadFile(`static/${entry.path}`, true)
-  }
+  // for await (const entry of readdirp('./html/static', { type: 'files' })) {
+  //   queue.add(() => uploadFile(`static/${entry.path}`, true))
+  //   // uploadFile(`static/${entry.path}`, true)
+  // }
 }
 
-main().catch(e => {
-  console.error(e)
-  process.exitCode = 1
-})
+async function putStream (objectName='1.txt') {
+  try {
+    const file = resolve('./html', objectName)
+    console.log('file', file);
+    const cacheControl = 'max-age=31536000'
+    await client.putStream(objectName, createReadStream(file))
+    console.log(`Done: ${objectName}`)
+  }catch(e){
+    console.log(`fail: ${e}`)
+  }
+}
+const filepath = resolve('./html', '1.txt')
+client.putStream('ossdemo/1.txt', fs.createReadStream(filepath)).then((result) => {
+  console.log(result);
+});
+// putStream()
+// main().catch(e => {
+  
+//   console.error(e)
+//   process.exitCode = 1
+// })
