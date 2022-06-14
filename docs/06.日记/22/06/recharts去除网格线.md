@@ -13,6 +13,8 @@ tags:
 ## 背景
 在使用recharts图表组件时， 发现使用了背景网格线后， 水平方向底部有虚线和实线 重叠现象。
 
+![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/cd6da59124ed4bafa033e67c62d58a14~tplv-k3u1fbpfcp-watermark.image?)
+
 ```js
 <ResponsiveContainer width="100%" height="100%">
     <LineChart data={data} {...ChartProps}>
@@ -39,6 +41,7 @@ tags:
 ## 解决
 在stackoverflow上看到一篇文章，原理是给CartesianGrid增加class属性，由此受到启发，给CartesianGrid 增加一个属性解决, 将第一个线的透明度设置为0，这样就不显示了。
 
+![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/dc207269610f4367b8444e6dbacebba6~tplv-k3u1fbpfcp-watermark.image?)
 ```js
 <CartesianGrid
     strokeDasharray="4 4"
