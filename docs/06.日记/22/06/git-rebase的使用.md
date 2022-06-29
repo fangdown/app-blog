@@ -41,3 +41,28 @@ git rebase master
 ![](https://api.git123.cn/proxy/image?url=https://img-blog.csdnimg.cn/12b959efcc454da5a15b9fdec493d61b.png?)
 
 
+## master变基
+
+从 master 切 一个 dev1 分支
+
+从 master 切 一个 dev2 分支
+
+修改 dev2，然后提交，merge 到 master
+
+此时dev1上的master是旧的基点, dev1已经在最新的commit之后了
+
+git rebase 本质上是需要给 dev1 变基，就是将基线拉到最新 commit 之前，
+
+在 dev1 分支下，执行```git rebase master```,解决问题，流程如下：
+
+```
+~master: git pull origin master
+
+~dev1: git rebase master
+
+~dev1: 解决冲突
+
+~dev1: git rebase --continue
+
+~dev1: git push origin -f
+```
