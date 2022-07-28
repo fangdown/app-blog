@@ -1,0 +1,51 @@
+/* harmony default export */
+
+/* harmony export */
+
+/* harmony import */
+
+/* webpack/runtime/define property getters */
+
+/*! ./lib/a */
+
+/*!********************!*\
+  !*** ./src/foo.js ***!
+  \********************/
+
+/*!**********************!*\
+  !*** ./src/lib/a.js ***!
+  \**********************/
+
+/************************************************************************/
+
+/******/
+
+/***/
+
+// @license mit
+
+// @preserve abc
+
+// Check if module is in cache
+
+// Create a new module (and put it into the cache)
+
+// Execute the module function
+
+// Return the exports of the module
+
+// The module cache
+
+// The require function
+
+// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
+
+// define __esModule on exports
+
+// define getter functions for harmony exports
+
+// no module.id needed
+
+// no module.loaded needed
+
+// webpackBootstrap
