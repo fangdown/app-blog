@@ -1,0 +1,43 @@
+/* 图片 */
+.border-1px {
+  border-width: 0 0 1px 0;
+  border-style: solid;
+  border-image: url(border.png) 0 0 1 stretch;
+}
+
+/* 伪类 */
+.scale-1px {
+  position: relative;
+}
+.scale-1px::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #000;
+  transform-origin: 0 0;
+  transform: scaleY(0.5);
+}
+/* viewport设置 */
+/* <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> */
+.border-1px {
+  position: relative;
+  border-bottom: 1px solid #000;
+}
+.border-1px::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #000;
+  transform-origin: 0 0;
+  transform: scaleY(0.5);
+}
+/* 阴影 */
+.box-shadow-1px {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+}
