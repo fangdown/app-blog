@@ -1,19 +1,20 @@
-const baiduCode = require('./config/baiduCode.js'); // 百度统计hm码
-const htmlModules = require('./config/htmlModules.js');
+const baiduCode = require("./config/baiduCode.js"); // 百度统计hm码
+const htmlModules = require("./config/htmlModules.js");
 
 module.exports = {
-  theme: 'vdoing', // 使用npm包主题
+  theme: "vdoing", // 使用npm包主题
   // theme: require.resolve('../../theme-vdoing'), // 使用本地主题
   dest: "html",
   title: "番都前端",
-  description: '前端坚持学习、总结归纳、不进则退。JavaScript,js,ES6,TypeScript,vue,React,python,css3,html5,Node,git,github等技术文章。前端|html|css|es6|react|vue|nodejs|typescript|小程序|微信|安全|mysql|centos|全栈|项目经验',
+  description:
+    "前端坚持学习、总结归纳、不进则退。JavaScript,js,ES6,TypeScript,vue,React,python,css3,html5,Node,git,github等技术文章。前端|html|css|es6|react|vue|nodejs|typescript|小程序|微信|安全|mysql|centos|全栈|项目经验",
   // base: '/', // 默认'/'。如果你想将你的网站部署到如 https://foo.github.io/bar/，那么 base 应该被设置成 "/bar/",（否则页面将失去样式等文件）
 
   // 主题配置
   themeConfig: {
     // 导航配置
     nav: [
-      { text: '首页', link: '/' },
+      { text: "首页", link: "/" },
       // {
       //   text: '前端',
       //   link: '/web/', //目录页链接，此处link是vdoing主题新增的配置项，有二级导航时，可以点击一级导航跳到目录页
@@ -83,7 +84,7 @@ module.exports = {
       //   ],
       // },
       // { text: '关于', link: '/about/' },
-      { text: '面经', link: 'https://tw.git123.cn/#/mj' },
+      { text: "面经", link: "https://tw.git123.cn/#/mj" },
       // {
       //   text: '收藏',
       //   link: '/pages/beb6c0bd8a66cea6/',
@@ -94,23 +95,23 @@ module.exports = {
       //   // ],
       // },
       {
-        text: '索引',
-        link: '/archives/',
+        text: "索引",
+        link: "/archives/",
         items: [
-          { text: '分类', link: '/categories/' },
-          { text: '标签', link: '/tags/' },
-          { text: '归档', link: '/archives/' },
+          { text: "分类", link: "/categories/" },
+          { text: "标签", link: "/tags/" },
+          { text: "归档", link: "/archives/" },
         ],
       },
     ],
     sidebarDepth: 2, // 侧边栏显示深度，默认1，最大2（显示到h3标题）
-    logo: 'https://fangdown.cn/vblog/head.png', // 导航栏logo
-    repo: '', // 导航栏右侧生成Github链接
+    logo: "https://vblog-1256630012.cos.ap-chengdu.myqcloud.com/head.png", // 导航栏logo
+    repo: "", // 导航栏右侧生成Github链接
     searchMaxSuggestions: 10, // 搜索结果显示最大数
-    lastUpdated: '上次更新', // 开启更新时间，并配置前缀文字   string | boolean (取值为git提交时间)
-    docsDir: 'docs', // 编辑的文件夹
+    lastUpdated: "上次更新", // 开启更新时间，并配置前缀文字   string | boolean (取值为git提交时间)
+    docsDir: "docs", // 编辑的文件夹
     editLinks: true, // 启用编辑
-    editLinkText: '编辑',
+    editLinkText: "编辑",
     // valineConfig: {
     //   appId: "HAlXd7aEqlpxMTl8tvQTmfGl-gzGzoHsz",
     //   appKey: "UpfRutPqdT1OjBiB9PbFd1RH",
@@ -146,19 +147,19 @@ module.exports = {
     // pageButton: false, // 是否显示快捷翻页按钮，默认true
 
     // 侧边栏  'structuring' | { mode: 'structuring', collapsable: Boolean} | 'auto' | <自定义>    温馨提示：目录页数据依赖于结构化的侧边栏数据，如果你不设置为'structuring',将无法使用目录页
-    sidebar: 'structuring',
+    sidebar: "structuring",
 
     // 文章默认的作者信息，可在md文件中单独配置此信息 String | {name: String, link: String}
     author: {
-      name: 'fangdown', // 必需
-      link: 'https://github.com/fangdown', // 可选的
+      name: "fangdown", // 必需
+      link: "https://github.com/fangdown", // 可选的
     },
 
     // 博主信息，显示在首页侧边栏
     blogger: {
-      avatar: 'https://fangdown.cn/vblog/head.png',
-      name: 'fangdown',
-      slogan: '番都前端',
+      avatar: "https://vblog-1256630012.cos.ap-chengdu.myqcloud.com/head.png",
+      name: "fangdown",
+      slogan: "番都前端",
     },
 
     // 社交图标，显示于博主信息栏和页脚栏。内置图标：https://doc.xugaoyi.com/pages/a20ce8/#social
@@ -186,27 +187,28 @@ module.exports = {
     },
 
     // 插入hmtl(广告)模块
-    htmlModules
+    htmlModules,
   },
 
   // 注入到页面<head>中的标签，格式[tagName, { attrName: attrValue }, innerHTML?]
   head: [
-    ['link', { rel: 'icon', href: '/img/favicon.ico' }], //favicons，资源放在public文件夹
+    ["link", { rel: "icon", href: "/img/favicon.ico" }], //favicons，资源放在public文件夹
     [
-      'meta',
+      "meta",
       {
-        name: 'keywords',
-        content: '前端博客,个人技术博客,前端,前端开发,前端框架,web前端,前端面试题,技术文档,学习,面试,JavaScript,js,ES6,TypeScript,vue,python,css3,html5,Node,git,github,markdown',
+        name: "keywords",
+        content:
+          "前端博客,个人技术博客,前端,前端开发,前端框架,web前端,前端面试题,技术文档,学习,面试,JavaScript,js,ES6,TypeScript,vue,python,css3,html5,Node,git,github,markdown",
       },
     ],
-    ['meta', { name: 'baidu-site-verification', content: '7F55weZDDc' }], // 百度统计的站长验证（你可以去掉）
-    ['meta', { name: 'theme-color', content: '#11a8cd' }], // 移动浏览器主题颜色
+    ["meta", { name: "baidu-site-verification", content: "7F55weZDDc" }], // 百度统计的站长验证（你可以去掉）
+    ["meta", { name: "theme-color", content: "#11a8cd" }], // 移动浏览器主题颜色
     [
-      'script',
+      "script",
       {
-        'data-ad-client': 'ca-pub-7828333725993554',
-        async: 'async',
-        src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js',
+        "data-ad-client": "ca-pub-7828333725993554",
+        async: "async",
+        src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
       },
     ], // 网站关联Google AdSense 与 html格式广告支持（你可以去掉）
   ],
@@ -219,51 +221,54 @@ module.exports = {
     //   excludeClassName: 'theme-vdoing-content' // 要排除元素的class, 默认空''
     // }],
 
-    'vuepress-plugin-baidu-autopush', // 百度自动推送
+    "vuepress-plugin-baidu-autopush", // 百度自动推送
 
     // 可以添加第三方搜索链接的搜索框（原官方搜索框的参数仍可用）
     [
-      'thirdparty-search',
+      "thirdparty-search",
       {
         thirdparty: [
           // 可选，默认 []
           {
-            title: '在MDN中搜索',
-            frontUrl: 'https://developer.mozilla.org/zh-CN/search?q=', // 搜索链接的前面部分
-            behindUrl: '', // 搜索链接的后面部分，可选，默认 ''
+            title: "在MDN中搜索",
+            frontUrl: "https://developer.mozilla.org/zh-CN/search?q=", // 搜索链接的前面部分
+            behindUrl: "", // 搜索链接的后面部分，可选，默认 ''
           },
           {
-            title: '在Runoob中搜索',
-            frontUrl: 'https://www.runoob.com/?s=',
+            title: "在Runoob中搜索",
+            frontUrl: "https://www.runoob.com/?s=",
           },
           {
-            title: '在Vue API中搜索',
-            frontUrl: 'https://cn.vuejs.org/v2/api/#',
+            title: "在Vue API中搜索",
+            frontUrl: "https://cn.vuejs.org/v2/api/#",
           },
           {
-            title: '在Bing中搜索',
-            frontUrl: 'https://cn.bing.com/search?q=',
+            title: "在Bing中搜索",
+            frontUrl: "https://cn.bing.com/search?q=",
           },
           {
-            title: '通过百度搜索本站的',
-            frontUrl: 'https://www.baidu.com/s?wd=site%3Afangdown.cn%20',
+            title: "通过百度搜索本站的",
+            frontUrl: "https://www.baidu.com/s?wd=site%3Afangdown.cn%20",
           },
         ],
       },
     ],
 
     [
-      'one-click-copy', // 代码块复制按钮
+      "one-click-copy", // 代码块复制按钮
       {
-        copySelector: ['div[class*="language-"] pre', 'div[class*="aside-code"] aside'], // String or Array
-        copyMessage: '复制成功', // default is 'Copy successfully and then paste it for use.'
+        copySelector: [
+          'div[class*="language-"] pre',
+          'div[class*="aside-code"] aside',
+        ], // String or Array
+        copyMessage: "复制成功", // default is 'Copy successfully and then paste it for use.'
         duration: 1000, // prompt message display time.
         showInMobile: false, // whether to display on the mobile side, default: false.
       },
     ],
 
     [
-      'demo-block', // demo演示模块 https://github.com/xiguaxigua/vuepress-plugin-demo-block
+      "demo-block", // demo演示模块 https://github.com/xiguaxigua/vuepress-plugin-demo-block
       {
         settings: {
           // jsLib: ['http://xxx'], // 在线示例(jsfiddle, codepen)中的js依赖
@@ -276,31 +281,31 @@ module.exports = {
       },
     ],
     [
-      'vuepress-plugin-zooming', // 放大图片
+      "vuepress-plugin-zooming", // 放大图片
       {
-        selector: '.theme-vdoing-content img:not(.no-zoom)', // 排除class是no-zoom的图片
+        selector: ".theme-vdoing-content img:not(.no-zoom)", // 排除class是no-zoom的图片
         options: {
-          bgColor: 'rgba(0,0,0,0.6)',
+          bgColor: "rgba(0,0,0,0.6)",
         },
       },
     ],
     [
-      'vuepress-plugin-baidu-tongji', // 百度统计 （你可以去掉）
+      "vuepress-plugin-baidu-tongji", // 百度统计 （你可以去掉）
       {
-        hm: baiduCode || '569604736137809bb820953a8d760431',
+        hm: baiduCode || "569604736137809bb820953a8d760431",
       },
     ],
     [
-      'vuepress-plugin-comment', // 评论
+      "vuepress-plugin-comment", // 评论
       {
-        choosen: 'valine', 
+        choosen: "valine",
         options: {
-          el: '#valine-vuepress-comment',
+          el: "#valine-vuepress-comment",
           appId: "HAlXd7aEqlpxMTl8tvQTmfGl-gzGzoHsz",
           appKey: "UpfRutPqdT1OjBiB9PbFd1RH",
-          path: '<%- frontmatter.commentid || frontmatter.permalink %>'
-        }
-      }
+          path: "<%- frontmatter.commentid || frontmatter.permalink %>",
+        },
+      },
       // {
       //   choosen: 'gitalk',
       //   options: {
@@ -320,22 +325,23 @@ module.exports = {
       // },
     ],
     [
-      '@vuepress/last-updated', // "上次更新"时间格式
+      "@vuepress/last-updated", // "上次更新"时间格式
       {
         transformer: (timestamp, lang) => {
-          const dayjs = require('dayjs') // https://day.js.org/
-          return dayjs(timestamp).format('YYYY/MM/DD, HH:mm:ss')
+          const dayjs = require("dayjs"); // https://day.js.org/
+          return dayjs(timestamp).format("YYYY/MM/DD, HH:mm:ss");
         },
       },
     ],
   ],
   configureWebpack: (config, isServer) => {
-    if (!isServer) {
-      config.output.publicPath =
-        config.mode === "production" ? "https://fangdown.cn/" : "";
-    }
+    // 暂时去掉cdn
+    // if (!isServer) {
+    //   config.output.publicPath =
+    //     config.mode === "production" ? "https://fangdown.cn/" : "";
+    // }
     // output:{
     //   publicPath: process.env === 'production' ?'https://fangdown.cn/' : ''
     // }
   },
-}
+};
