@@ -34,26 +34,26 @@ const d4 = new Dog();
 d4.say("blue"); // 原型污染 [ 'black', 'white', 'red', 'blue' ]
 
 // 寄生组合
-// function Animal(name) {
-//   this.name = name;
-//   this.colors = ["black", "white"];
-// }
-// Animal.prototype.say = function (color) {
-//   console.log("I am " + this.name + " and I am " + this.age);
-//   this.colors.push(color);
-//   console.log(this.colors);
-// };
+function Animal(name) {
+  this.name = name;
+  this.colors = ["black", "white"];
+}
+Animal.prototype.say = function (color) {
+  console.log("I am " + this.name + " and I am " + this.age);
+  this.colors.push(color);
+  console.log(this.colors);
+};
 
-// function Dog(name, age) {
-//   Animal.call(this, name);
-//   this.age = age;
-// }
+function Dog(name, age) {
+  Animal.call(this, name);
+  this.age = age;
+}
 
-// function inheritPrototype(Child, Parent) {
-//   const prototype = Object.create(Parent.prototype);
-//   Child.prototype = prototype;
-//   Child.prototype.constructor = Child;
-// }
+function inheritPrototype(Child, Parent) {
+  const prototype = Object.create(Parent.prototype);
+  Child.prototype = prototype;
+  Child.prototype.constructor = Child;
+}
 
 // inheritPrototype(Dog, Animal);
 

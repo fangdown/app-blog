@@ -8,21 +8,19 @@
  * @param {*} obj2
  */
 
-function DeepEqual(obj1, obj2) {
-  if (obj1 === obj2) return true;
-  if (typeof obj1 !== typeof obj2 || obj1 === null || obj2 === null)
-    return false;
-
-  if (typeof obj1 === "object") {
-    const keys1 = Object.keys(obj1);
-    const keys2 = Object.keys(obj2);
-    if (keys1.length !== keys2.length) return false;
-    for (let key of keys1) {
-      if (!keys2.includes(key) || !DeepEqual(obj1[key], obj2[key])) {
-        return false;
-      }
+function deepEqual(obj1, obj2) {
+  if (typeof obj1 === 'object' && typeof obj2 === 'object') {
+    const keys1 = Object.keys(obj1)
+    const keys2 = Object.keys(obj2)
+    if (keys1.length !== keys2.length) return false
+    for (let key in obj1) {
+      if (!keys2.includes(key) || !deepEqual(obj1[key], obj2[key])) return false
     }
-    return true;
+    return true
   }
-  return false;
+  return obj1 === obj2
 }
+const obj1 = { a: 1 }
+const obj2 = { a: 1 }
+console.log(obj1 === obj2)
+console.log(deepEqual(obj1, obj2))
