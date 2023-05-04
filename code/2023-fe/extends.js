@@ -1,4 +1,4 @@
-// 构造函数继承
+// 构造函数继承 无法访问到原型对象
 function Animal(name) {
   this.name = name;
 }
@@ -14,7 +14,7 @@ const d1 = new Dog("dog");
 console.log(d1.name);
 d1.say(); // 无法继承原型上的方法
 
-// 原型链继承
+// 原型链继承  原型对象共享，无法访问到属性
 function Animal(name) {
   this.name = name;
   this.colors = ["black", "white"];
@@ -33,7 +33,7 @@ d3.say("red");
 const d4 = new Dog();
 d4.say("blue"); // 原型污染 [ 'black', 'white', 'red', 'blue' ]
 
-// 寄生组合
+// 寄生组合  属性和原型对象都可以访问
 function Animal(name) {
   this.name = name;
   this.colors = ["black", "white"];

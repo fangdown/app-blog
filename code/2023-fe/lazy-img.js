@@ -19,6 +19,7 @@ const useIntersectionObserver = () => {
       }
     });
   });
+  io.observe(document.querySelector(".img"));
 };
 
 const useOffsetTop = () => {
@@ -31,3 +32,5 @@ const useOffsetTop = () => {
     }
   }
 };
+// IntersectionObserver  判断是否可见
+// MutationObserver  判断子元素是否有变化
