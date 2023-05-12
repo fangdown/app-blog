@@ -1,66 +1,40 @@
-// bfs 
-function bfs(node) {
-    const stack = [node]
-    const res = []
-    while (stack.length) {
-        res.push(stack.shift())
-        if (node.children) {
-            stack.push(...node.children)
-        }
+function debounce(fn, delay) {
+  let timer;
+
+  return function () {
+    if (timer) {
+      clearTimeout(timer);
+      timer = null;
     }
-    return res
+    const self = this;
+    const args = [...arguments];
+    timer = setTimeout(() => {
+      fn.apply(self, args);
+    }, delay);
+  };
 }
 
-function dfs(node) {
-    const stack = [node]
-    const arr = []
-    while (stack.length) {
-        arr.push(stack.shift())
-        if (node.children) {
-            stack.unshift(...node.children)
-        }
+function throttle(fn, delay) {
+  let timer;
+  let lastTime = 0;
+  return function () {
+    if (timer) {
+      clearTimeout(timer);
+      timer = null;
     }
-}
-
-
-// deepClone
-function deepClone(obj) {
-    if (typeof obj !== 'object' || obj === null) return obj
-    const newObj = Array.isArray(obj) ? [] : {}
-    Object.keys(obj).forEach(x => {
-        newObj[x] = deepClone(obj[x])
-    })
-    return newObj
-}
-
-const o1 = [{ a: 1, b: [1, 2, 3] }]
-const o2 = deepClone(o1)
-console.log(o2)
-
-
-function deepEqual(obj1, obj2) {
-    if (typeof obj1 === 'object' && typeof obj2 === 'object') {
-        const keys1 = Object.keys(obj1)
-        const keys2 = Object.keys(obj2)
-        if (keys1.length !== keys2.length) return false
-        for (key in obj1) {
-            if (!deepEqual(obj1[key], obj2[key])) return false
-        }
-        return true
+    const self = this;
+    const args1 = [...arguments];
+    const now = +Date.now();
+    const remainTime = delay - (now - lastTime);
+    if (remainTime <= 0) {
+      fn.apply(self, args1);
+      lastTime = now;
+    } else {
+      timer = setTimeout(() => {
+        fn.apply(self, args1);
+        timer = null;
+        lastTime = +Date.now();
+      }, remainTime);
     }
-    return obj1 === obj2
-}
-const obj1 = { a: 1 }
-const obj2 = { a: 1 }
-console.log(obj1 === obj2)
-console.log(deepEqual(obj1, obj2))
-
-[1, 2, 3, 4].forEach(x => {
-    console.log(x)
-    if (x === 2) return false
-})
-
-for (x in [1, 2, 3, 4]) {
-    console.log(x)
-    if (x === 2) return false
+  };
 }
