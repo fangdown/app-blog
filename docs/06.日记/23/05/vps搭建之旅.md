@@ -1,3 +1,12 @@
+---
+title: vps搭建之旅
+date: 2023-04-27 21:01:02
+permalink: /pages/4b6f7f/
+categories:
+  - 日记
+tags:
+  - 
+---
 # VPS搭建之旅
 
 # 购买服务器
