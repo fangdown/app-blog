@@ -1,4 +1,3 @@
-// nodejs 洋葱模型
 function compose(middlewares) {
   return function (ctx, next) {
     const dispatch = function (i) {

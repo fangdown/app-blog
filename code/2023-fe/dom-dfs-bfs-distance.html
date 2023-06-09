@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="root">
+      <div class="t1">
+        111
+        <div class="t2">
+          222
+          <p class="t5"></p>
+        </div>
+      </div>
+      <div class="t3">aaa</div>
+    </div>
+    <script>
+      const root = document.getElementById("root");
+      const t5 = document.getElementsByClassName("t5")[0];
+      const t3 = document.getElementsByClassName("t3")[0];
+      const dfs = (root, arr = []) => {
+        arr.push(root);
+        const children = [...root?.children] || [];
+        children.forEach((child) => {
+          dfs(child, arr);
+        });
+        return arr;
+      };
+      const dfs2 = (root, arr = []) => {
+        const stack = [root];
+        while (stack.length) {
+          const node = stack.pop();
+          arr.push(node);
+          if (node.children?.length) {
+            [...node.children].forEach((child) => {
+              stack.unshift(child);
+            });
+          }
+        }
+      };
+      const bfs = (root, arr = []) => {
+        const stack = [root];
+        while (stack.length) {
+          const node = stack.pop();
+          arr.push(node);
+
+          if (node.children.length) {
+            [...node.children].forEach((child) => {
+              stack.unshift(child);
+            });
+          }
+        }
+        return arr;
+      };
+      const getDistanceByLeaf = (root, leaf) => {
+        if (leaf === root) return 0;
+        for (let i = 0; i < root.children?.length; i++) {
+          const child = root.children[i];
+          let distance = getDistanceByLeaf(child, leaf);
+          if (distance >= 0) return distance + 1;
+        }
+        return -1;
+      };
+      const result1 = dfs(root);
+      //   const result2 = bfs(root);
+      const result3 = dfs(root);
+      console.log(result1);
+      //   console.log(result2);
+      console.log(result3);
+      console.log("t5", t5);
+      console.log(root);
+      console.log(getDistanceByLeaf(root, t3));
+    </script>
+  </body>
+</html>

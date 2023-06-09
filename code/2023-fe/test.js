@@ -1,40 +1,45 @@
-function debounce(fn, delay) {
-  let timer;
-
-  return function () {
-    if (timer) {
-      clearTimeout(timer);
-      timer = null;
-    }
-    const self = this;
-    const args = [...arguments];
-    timer = setTimeout(() => {
-      fn.apply(self, args);
-    }, delay);
+function compose(middlewares) {
+  return function (ctx, next) {
+    const dispatch = function (i) {
+      const fn = middlewares[i];
+      if (i === middlewares.length) fn = next;
+      if (!fn) return Promise.resolve();
+      try {
+        return Promise.resolve(fn(ctx, dispatch(i + 1)));
+      } catch (error) {
+        return Promise.reject(error);
+      }
+    };
+    dispatch(0);
   };
 }
+var z = 1;
+const test = () => {
+  console.log("z", z);
+};
+(function () {
+  var z = 2;
+  test();
+})();
 
-function throttle(fn, delay) {
-  let timer;
-  let lastTime = 0;
-  return function () {
-    if (timer) {
-      clearTimeout(timer);
-      timer = null;
-    }
-    const self = this;
-    const args1 = [...arguments];
-    const now = +Date.now();
-    const remainTime = delay - (now - lastTime);
-    if (remainTime <= 0) {
-      fn.apply(self, args1);
-      lastTime = now;
-    } else {
-      timer = setTimeout(() => {
-        fn.apply(self, args1);
-        timer = null;
-        lastTime = +Date.now();
-      }, remainTime);
-    }
-  };
+var obj = {
+  name: "fff",
+  getName: () => {
+    this.name;
+  },
+};
+// console.log("name", obj.getName());
+var obj = "123";
+var obj = [1, 2, 3];
+for (let k in obj) {
+  console.log("k", k);
 }
+(async function () {
+  const p1 = Promise.resolve(100);
+  const p2 = Promise.resolve(200);
+  const p3 = Promise.resolve(300);
+
+  for await (let p of [p1, p2, p3]) {
+    console.log(p);
+  }
+})();
