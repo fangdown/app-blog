@@ -66,3 +66,7 @@ https://leetcode-cn.com/problemset/all
 4. 编程的时候就用牛客网的 id 去答题，因为答题的时候不会提示错误，用自己的会
 
 以上题目熟练掌握后进行模拟考试，模拟套卷链接：https://www.nowcoder.com/test/1088888/summary
+
+# 字符串 s1, 字符串 s2 , 求第 k 个字符串第一个位置
+
+比如 s1 = 'abcdefgha' , s2 = 'bc'

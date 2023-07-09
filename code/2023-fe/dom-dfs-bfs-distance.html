@@ -60,6 +60,7 @@
         for (let i = 0; i < root.children?.length; i++) {
           const child = root.children[i];
           let distance = getDistanceByLeaf(child, leaf);
+          console.log("distance", distance);
           if (distance >= 0) return distance + 1;
         }
         return -1;
@@ -67,12 +68,12 @@
       const result1 = dfs(root);
       //   const result2 = bfs(root);
       const result3 = dfs(root);
-      console.log(result1);
+      // console.log(result1);
       //   console.log(result2);
-      console.log(result3);
+      // console.log(result3);
       console.log("t5", t5);
-      console.log(root);
-      console.log(getDistanceByLeaf(root, t3));
+      // console.log(root);
+      console.log(getDistanceByLeaf(root, t5));
     </script>
   </body>
 </html>
