@@ -1,3 +1,14 @@
+---
+title: webpack4打包优化
+date: 2023-07-09 07:42:39
+permalink: /pages/a80d08/
+categories:
+  - 日记
+  - 23
+  - 07
+tags:
+  - 
+---
 # 参考
 
 - [Create React App 中的 Weback 优化](https://wolffn.github.io/blog/2020/07/17/Create%20React%20App%20%E4%B8%AD%E7%9A%84%20Webpack%20%E4%BC%98%E5%8C%96/#todo)

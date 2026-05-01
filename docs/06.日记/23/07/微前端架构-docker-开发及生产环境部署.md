@@ -1,3 +1,14 @@
+---
+title: 微前端架构-docker-开发及生产环境部署
+date: 2023-07-04 09:16:48
+permalink: /pages/dc80f4/
+categories:
+  - 日记
+  - 23
+  - 07
+tags:
+  - 
+---
 # 微前端架构-docker-开发及生产环境部署
 
 ## 开发环境

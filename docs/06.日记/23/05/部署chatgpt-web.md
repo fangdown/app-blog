@@ -1,3 +1,14 @@
+---
+title: 部署chatgpt-web
+date: 2023-05-25 15:52:44
+permalink: /pages/b823d2/
+categories:
+  - 日记
+  - 23
+  - 05
+tags:
+  - 
+---
 # 部署 chatgpt-web
 
 # 准备
