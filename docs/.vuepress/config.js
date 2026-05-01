@@ -5,7 +5,7 @@ module.exports = {
   theme: "vdoing", // 使用npm包主题
   // theme: require.resolve('../../theme-vdoing'), // 使用本地主题
   dest: "html",
-  title: "番都前端",
+  title: "我的网站开发技术经验总结",
   description:
     "前端坚持学习、总结归纳、不进则退。JavaScript,js,ES6,TypeScript,vue,React,python,css3,html5,Node,git,github等技术文章。前端|html|css|es6|react|vue|nodejs|typescript|小程序|微信|安全|mysql|centos|全栈|项目经验",
   // base: '/', // 默认'/'。如果你想将你的网站部署到如 https://foo.github.io/bar/，那么 base 应该被设置成 "/bar/",（否则页面将失去样式等文件）
@@ -159,7 +159,7 @@ module.exports = {
     blogger: {
       avatar: "https://vblog-1256630012.cos.ap-chengdu.myqcloud.com/head.png",
       name: "fangdown",
-      slogan: "番都前端",
+      slogan: "我的网站开发技术经验总结",
     },
 
     // 社交图标，显示于博主信息栏和页脚栏。内置图标：https://doc.xugaoyi.com/pages/a20ce8/#social
