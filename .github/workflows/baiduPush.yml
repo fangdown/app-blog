@@ -24,6 +24,5 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 18
-          cache: npm
       - name: 'Run baiduPush' # 步骤二，执行sh命令文件
-        run: npm ci && npm run baiduPush # 运行目录是仓库根目录
+        run: npm install && npm run baiduPush # 运行目录是仓库根目录
