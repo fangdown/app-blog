@@ -1,4 +1,3 @@
-const baiduCode = require("./config/baiduCode.js"); // 百度统计hm码
 const htmlModules = require("./config/htmlModules.js");
 
 module.exports = {
@@ -201,7 +200,6 @@ module.exports = {
           "前端博客,个人技术博客,前端,前端开发,前端框架,web前端,前端面试题,技术文档,学习,面试,JavaScript,js,ES6,TypeScript,vue,python,css3,html5,Node,git,github,markdown",
       },
     ],
-    ["meta", { name: "baidu-site-verification", content: "7F55weZDDc" }], // 百度统计的站长验证（你可以去掉）
     ["meta", { name: "theme-color", content: "#11a8cd" }], // 移动浏览器主题颜色
     [
       "script",
@@ -220,8 +218,6 @@ module.exports = {
     //   color: '#11a8cd', // 爱心颜色，默认随机色
     //   excludeClassName: 'theme-vdoing-content' // 要排除元素的class, 默认空''
     // }],
-
-    "vuepress-plugin-baidu-autopush", // 百度自动推送
 
     // 可以添加第三方搜索链接的搜索框（原官方搜索框的参数仍可用）
     [
@@ -245,10 +241,6 @@ module.exports = {
           {
             title: "在Bing中搜索",
             frontUrl: "https://cn.bing.com/search?q=",
-          },
-          {
-            title: "通过百度搜索本站的",
-            frontUrl: "https://www.baidu.com/s?wd=site%3Afangdown.cn%20",
           },
         ],
       },
@@ -287,12 +279,6 @@ module.exports = {
         options: {
           bgColor: "rgba(0,0,0,0.6)",
         },
-      },
-    ],
-    [
-      "vuepress-plugin-baidu-tongji", // 百度统计 （你可以去掉）
-      {
-        hm: baiduCode || "569604736137809bb820953a8d760431",
       },
     ],
     [

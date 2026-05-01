@@ -4,12 +4,7 @@
   "scripts": {
     "dev": "vuepress dev docs",
     "build": "vuepress build docs",
-    "deploy": "bash deploy.sh",
-    "ali-oss": "ossutil cp -rf --meta Cache-Control:no-cache html oss://app-blog/ ",
-    "ali-oss-node": "node scripts/upload.mjs",
-    "demo": "node scripts/demo.js",
     "editFm": "node utils/editFrontmatter.js",
-    "baiduPush": "node utils/baiduPush.js https://fangdown.cn && bash baiduPush.sh",
     "publish": "cd ./theme-vdoing && npm publish && cd .. && yarn updateTheme",
     "updateTheme": "yarn remove vuepress-theme-vdoing && rm -rf node_modules && yarn && yarn add vuepress-theme-vdoing -D"
   },
@@ -19,8 +14,6 @@
     "inquirer": "^7.1.0",
     "json2yaml": "^1.1.0",
     "vuepress": "1.8.0",
-    "vuepress-plugin-baidu-autopush": "^1.0.1",
-    "vuepress-plugin-baidu-tongji": "^1.0.1",
     "vuepress-plugin-demo-block": "^0.7.2",
     "vuepress-plugin-one-click-copy": "^1.0.2",
     "vuepress-plugin-thirdparty-search": "^1.0.2",
@@ -29,9 +22,6 @@
     "yamljs": "^0.3.0"
   },
   "dependencies": {
-    "ali-oss": "^6.17.1",
-    "p-queue": "^7.2.0",
-    "readdirp": "^3.6.0",
     "vuepress-plugin-comment": "^0.7.3"
   }
 }
